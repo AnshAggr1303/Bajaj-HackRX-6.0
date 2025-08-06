@@ -13,8 +13,39 @@ from .query_processor import QueryProcessor
 from .vector_store import VectorStore
 from .embedding_service import EmbeddingService
 
-# Load environment variables
-load_dotenv()
+# Debug: Print current working directory and file locations
+print(f"🔍 Current working directory: {os.getcwd()}")
+print(f"🔍 main.py location: {__file__}")
+
+# Try loading .env from multiple locations
+env_paths = [
+    ".env",              # Same directory as main.py
+    "../.env",           # Parent directory
+    os.path.join(os.path.dirname(__file__), ".env"),  # Absolute path same dir
+]
+
+env_loaded = False
+for env_path in env_paths:
+    full_path = os.path.abspath(env_path)
+    print(f"🔍 Checking .env at: {full_path}")
+    if os.path.exists(env_path):
+        print(f"✅ Found .env file at: {env_path}")
+        load_dotenv(env_path)
+        env_loaded = True
+        break
+    else:
+        print(f"❌ No .env file found at: {env_path}")
+
+if not env_loaded:
+    print("⚠️ No .env file found, trying default load_dotenv()")
+    load_dotenv()
+
+# Debug: Check what environment variables are loaded
+print(f"🔑 GOOGLE_API_KEY loaded: {'✅ Yes' if os.getenv('GOOGLE_API_KEY') else '❌ No'}")
+if os.getenv('GOOGLE_API_KEY'):
+    print(f"🔑 API Key starts with: {os.getenv('GOOGLE_API_KEY')[:10]}...")
+else:
+    print("🔑 Available env vars starting with 'G':", [k for k in os.environ.keys() if k.startswith('G')])
 
 # Setup logging
 logging.basicConfig(

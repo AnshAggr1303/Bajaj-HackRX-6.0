@@ -5,9 +5,42 @@ import google.generativeai as genai
 from typing import Dict, Any, List
 import json
 import re
+from dotenv import load_dotenv
 
-# ✅ Configure Gemini authentication here
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Load .env file first - before trying to access environment variables
+load_dotenv()
+
+# Debug: Check environment variables before configuring
+print("🔍 DEBUG in query_processor.py:")
+print(f"🔑 GOOGLE_API_KEY available: {'✅ Yes' if os.getenv('GOOGLE_API_KEY') else '❌ No'}")
+
+# Try multiple ways to get the API key
+api_key = None
+possible_keys = ['GOOGLE_API_KEY', 'GEMINI_API_KEY', 'GOOGLE_AI_KEY']
+
+for key_name in possible_keys:
+    api_key = os.getenv(key_name)
+    if api_key:
+        print(f"✅ Found API key in environment variable: {key_name}")
+        print(f"🔑 API Key starts with: {api_key[:15]}...")
+        break
+    else:
+        print(f"❌ No API key found in: {key_name}")
+
+if not api_key:
+    print("⚠️ No API key found in environment variables!")
+    print("🔍 All environment variables:", list(os.environ.keys()))
+    # Fallback - you can temporarily uncomment this line with your actual key
+    # api_key = "AIzaSyChD-04w-gRQ9eWvRZiCxuzW4I8acqnTAY"  # Your actual key
+
+if api_key:
+    try:
+        genai.configure(api_key=api_key)
+        print("✅ Gemini API configured successfully")
+    except Exception as e:
+        print(f"❌ Failed to configure Gemini API: {str(e)}")
+else:
+    print("❌ Cannot configure Gemini API - no valid API key found")
 
 logger = logging.getLogger(__name__)
 
@@ -46,15 +79,30 @@ class QueryProcessor:
     async def _generate_decision(self, query: str, relevant_docs: List[Dict]) -> Dict[str, Any]:
         """Generate insurance claim decision using Gemini"""
         try:
+            # Check if we have API key configured
+            if not api_key:
+                logger.error("❌ No API key available for Gemini")
+                return {
+                    "decision": "Undecided",
+                    "amount": None,
+                    "justification": "API key not configured for LLM processing",
+                    "referenced_clauses": [],
+                    "confidence_score": 0.0
+                }
+            
             # Prepare context from relevant documents
             context = self._prepare_context(relevant_docs)
             
             # Create prompt
             prompt = self._create_decision_prompt(query, context)
             
+            print(f"🚀 Attempting to call Gemini API with model: {self.model_name}")
+            
             # Generate response using Gemini
             model = genai.GenerativeModel(self.model_name)
             response = model.generate_content(prompt)
+            
+            print("✅ Successfully received response from Gemini")
             
             # Parse the response
             result = self._parse_llm_response(response.text, relevant_docs)
@@ -63,6 +111,7 @@ class QueryProcessor:
             
         except Exception as e:
             logger.error(f"❌ Decision generation failed: {str(e)}")
+            print(f"❌ Full error details: {str(e)}")
             return {
                 "decision": "Undecided",
                 "amount": None,
