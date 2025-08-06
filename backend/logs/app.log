@@ -1912,3 +1912,1607 @@
 2025-08-06 14:36:56,817 - app.query_processor - INFO - ✅ Generated decision: Undecided
 2025-08-06 14:36:56,818 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
 2025-08-06 14:39:45,280 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:06:21,952 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:06:21,952 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:06:21,953 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:06:21,953 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:06:27,980 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:06:28,349 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:06:28,350 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:06:28,350 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:06:28,720 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:06:28,795 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:06:28,800 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:06:28,825 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:06:28,825 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:07:38,945 - app.main - INFO - 🔍 Processing query: 46M, knee surgery, Pune, 3-month policy
+2025-08-06 23:07:38,946 - app.query_processor - INFO - 🔍 Processing query: 46M, knee surgery, Pune, 3-month policy
+2025-08-06 23:07:40,360 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:07:40,361 - app.query_processor - INFO - 📄 Found 20 relevant documents
+2025-08-06 23:07:44,857 - app.query_processor - INFO - ✅ Generated decision: Rejected
+2025-08-06 23:07:44,858 - app.main - INFO - ✅ Query processed successfully. Decision: Rejected
+2025-08-06 23:09:07,585 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:12:14,291 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:12:14,291 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:12:14,291 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:12:14,291 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:12:19,234 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:12:19,641 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:12:19,642 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:12:19,642 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:12:19,947 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:12:19,957 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:12:19,961 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:12:19,962 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-06 23:12:19,962 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-06 23:12:19,962 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-06 23:12:20,013 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-06 23:12:20,013 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-06 23:12:21,291 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-06 23:12:22,554 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-06 23:12:23,806 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-06 23:12:25,063 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-06 23:12:26,305 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-06 23:12:27,653 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-06 23:12:28,713 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-06 23:12:29,927 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-06 23:12:30,857 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-06 23:12:32,398 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-06 23:12:32,469 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-06 23:12:32,469 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-06 23:12:32,469 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-06 23:12:32,470 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-06 23:12:32,470 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-06 23:12:32,470 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-06 23:12:32,470 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-06 23:12:32,470 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-06 23:12:32,470 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 28 texts
+2025-08-06 23:12:33,453 - app.embedding_service - INFO - ✅ Generated 28 embeddings (dimension: 384)
+2025-08-06 23:12:33,454 - app.document_processor - INFO - ⏱️ Embedding took 0.98s (28.5 chunks/sec)
+2025-08-06 23:12:33,456 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-06 23:12:33,456 - app.document_processor - INFO - ✅ Total processing time: 0.99s for 28 chunks
+2025-08-06 23:12:33,456 - app.document_processor - INFO - ✅ Finished processing 28 chunks
+2025-08-06 23:12:33,456 - app.vector_store - INFO - 💾 Adding 28 chunks to vector store
+2025-08-06 23:12:33,743 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:12:33,743 - app.vector_store - INFO - ✅ Successfully added 28 chunks to vector store
+2025-08-06 23:12:33,743 - app.document_processor - INFO - ⏱️ Vector storage took 0.29s
+2025-08-06 23:12:33,743 - app.document_processor - INFO - 💾 Stored 28 chunks in vector database
+2025-08-06 23:12:33,745 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 28 chunks
+2025-08-06 23:12:33,745 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-06 23:12:33,745 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-06 23:12:33,777 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-06 23:12:33,777 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-06 23:12:34,982 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-06 23:12:37,244 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-06 23:12:38,725 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-06 23:12:40,197 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-06 23:12:41,706 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-06 23:12:41,706 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-06 23:12:41,706 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-06 23:12:41,706 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-06 23:12:41,706 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-06 23:12:41,706 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-06 23:12:41,706 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-06 23:12:41,706 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-06 23:12:41,706 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 23 texts
+2025-08-06 23:12:42,208 - app.embedding_service - INFO - ✅ Generated 23 embeddings (dimension: 384)
+2025-08-06 23:12:42,209 - app.document_processor - INFO - ⏱️ Embedding took 0.50s (45.8 chunks/sec)
+2025-08-06 23:12:42,210 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-06 23:12:42,210 - app.document_processor - INFO - ✅ Total processing time: 0.50s for 23 chunks
+2025-08-06 23:12:42,210 - app.document_processor - INFO - ✅ Finished processing 23 chunks
+2025-08-06 23:12:42,210 - app.vector_store - INFO - 💾 Adding 23 chunks to vector store
+2025-08-06 23:12:42,360 - app.vector_store - INFO - ✅ Successfully added 23 chunks to vector store
+2025-08-06 23:12:42,360 - app.document_processor - INFO - ⏱️ Vector storage took 0.15s
+2025-08-06 23:12:42,360 - app.document_processor - INFO - 💾 Stored 23 chunks in vector database
+2025-08-06 23:12:42,361 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 23 chunks
+2025-08-06 23:12:42,361 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-06 23:12:42,361 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-06 23:12:42,365 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-06 23:12:42,365 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-06 23:12:42,606 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-06 23:12:42,606 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-06 23:12:42,606 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-06 23:12:42,606 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-06 23:12:42,606 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-06 23:12:42,606 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-06 23:12:42,606 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-06 23:12:42,606 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-06 23:12:42,606 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 2 texts
+2025-08-06 23:12:43,007 - app.embedding_service - INFO - ✅ Generated 2 embeddings (dimension: 384)
+2025-08-06 23:12:43,007 - app.document_processor - INFO - ⏱️ Embedding took 0.40s (5.0 chunks/sec)
+2025-08-06 23:12:43,007 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-06 23:12:43,007 - app.document_processor - INFO - ✅ Total processing time: 0.40s for 2 chunks
+2025-08-06 23:12:43,007 - app.document_processor - INFO - ✅ Finished processing 2 chunks
+2025-08-06 23:12:43,007 - app.vector_store - INFO - 💾 Adding 2 chunks to vector store
+2025-08-06 23:12:43,021 - app.vector_store - INFO - ✅ Successfully added 2 chunks to vector store
+2025-08-06 23:12:43,021 - app.document_processor - INFO - ⏱️ Vector storage took 0.01s
+2025-08-06 23:12:43,021 - app.document_processor - INFO - 💾 Stored 2 chunks in vector database
+2025-08-06 23:12:43,021 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 2 chunks
+2025-08-06 23:12:43,021 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-06 23:12:43,021 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-06 23:12:43,046 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-06 23:12:43,046 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-06 23:12:44,219 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-06 23:12:45,968 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-06 23:12:47,263 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-06 23:12:48,514 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-06 23:12:48,514 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-06 23:12:48,514 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-06 23:12:48,515 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-06 23:12:48,515 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-06 23:12:48,515 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-06 23:12:48,515 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-06 23:12:48,515 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-06 23:12:48,515 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 36 texts
+2025-08-06 23:12:49,692 - app.embedding_service - INFO - ✅ Generated 36 embeddings (dimension: 384)
+2025-08-06 23:12:49,693 - app.document_processor - INFO - ⏱️ Embedding took 1.18s (30.6 chunks/sec)
+2025-08-06 23:12:49,694 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-06 23:12:49,694 - app.document_processor - INFO - ✅ Total processing time: 1.18s for 36 chunks
+2025-08-06 23:12:49,694 - app.document_processor - INFO - ✅ Finished processing 36 chunks
+2025-08-06 23:12:49,694 - app.vector_store - INFO - 💾 Adding 36 chunks to vector store
+2025-08-06 23:12:49,789 - app.vector_store - INFO - ✅ Successfully added 36 chunks to vector store
+2025-08-06 23:12:49,790 - app.document_processor - INFO - ⏱️ Vector storage took 0.10s
+2025-08-06 23:12:49,790 - app.document_processor - INFO - 💾 Stored 36 chunks in vector database
+2025-08-06 23:12:49,791 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 36 chunks
+2025-08-06 23:12:49,791 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-06 23:12:49,791 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-06 23:12:49,808 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-06 23:12:49,808 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-06 23:12:51,847 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-06 23:12:53,508 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-06 23:12:55,420 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-06 23:12:55,728 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-06 23:12:55,728 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-06 23:12:55,728 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-06 23:12:55,729 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-06 23:12:55,729 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-06 23:12:55,729 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-06 23:12:55,729 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-06 23:12:55,729 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-06 23:12:55,729 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 21 texts
+2025-08-06 23:12:56,160 - app.embedding_service - INFO - ✅ Generated 21 embeddings (dimension: 384)
+2025-08-06 23:12:56,161 - app.document_processor - INFO - ⏱️ Embedding took 0.43s (48.6 chunks/sec)
+2025-08-06 23:12:56,162 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-06 23:12:56,162 - app.document_processor - INFO - ✅ Total processing time: 0.43s for 21 chunks
+2025-08-06 23:12:56,162 - app.document_processor - INFO - ✅ Finished processing 21 chunks
+2025-08-06 23:12:56,162 - app.vector_store - INFO - 💾 Adding 21 chunks to vector store
+2025-08-06 23:12:56,255 - app.vector_store - INFO - ✅ Successfully added 21 chunks to vector store
+2025-08-06 23:12:56,255 - app.document_processor - INFO - ⏱️ Vector storage took 0.09s
+2025-08-06 23:12:56,255 - app.document_processor - INFO - 💾 Stored 21 chunks in vector database
+2025-08-06 23:12:56,255 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 21 chunks
+2025-08-06 23:12:56,256 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:17:54,053 - app.main - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-06 23:17:54,054 - app.query_processor - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-06 23:17:55,535 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:17:55,536 - app.query_processor - INFO - 📄 Found 20 relevant documents
+2025-08-06 23:20:24,797 - app.query_processor - INFO - ✅ Generated decision: Undecided
+2025-08-06 23:20:24,798 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-06 23:26:41,559 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:26:41,560 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:26:42,541 - app.query_processor - INFO - 📄 Found 20 relevant documents
+2025-08-06 23:27:07,633 - app.query_processor - INFO - ✅ Generated decision: Undecided
+2025-08-06 23:27:07,633 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-06 23:44:41,520 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:44:52,057 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:44:52,057 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:44:52,057 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:44:52,057 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:44:56,835 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:44:57,210 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:44:57,213 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:44:57,213 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:44:57,446 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:44:57,448 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:44:57,449 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:44:57,459 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:44:57,459 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:45:19,701 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:45:19,702 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:45:20,415 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:45:20,416 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:45:26,120 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 1.0
+2025-08-06 23:45:26,120 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Def. 36']
+2025-08-06 23:45:26,121 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:49:55,494 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:50:04,268 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:50:04,268 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:50:04,268 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:50:04,268 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:50:12,403 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:50:12,765 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:50:12,767 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:50:12,767 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:50:13,038 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:50:13,040 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:50:13,046 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:50:13,058 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:50:13,059 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:50:30,999 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:50:31,000 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:50:31,606 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:50:31,606 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:50:37,181 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 1.0
+2025-08-06 23:50:37,181 - app.query_processor - INFO - 📄 Referenced sources: ['Def. 36. Pre-existing Disease means any condition, ailment, injury or disease:\na) That is/are diagnosed by a physician within 48 months prior to the effective date of the policy issued by the insurer or its reinstatement or\nb) For which medical advice or treatment was recommended by, or received from, a physician within 48 months prior to the effective date of the policy issued by the insurer or its reinstatement.']
+2025-08-06 23:50:37,181 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:51:46,522 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:51:46,540 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:51:47,025 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:51:51,449 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-06 23:51:51,449 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Def. 36']
+2025-08-06 23:51:51,449 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:54:27,187 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:54:36,334 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:54:36,335 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:54:36,335 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:54:36,335 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:54:40,592 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:54:41,106 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:54:41,108 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:54:41,108 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:54:41,404 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:54:41,406 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:54:41,413 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:54:41,433 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:54:41,433 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:54:52,712 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:54:52,713 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:54:53,389 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:54:53,389 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:54:59,665 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-06 23:54:59,665 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Def. 36']
+2025-08-06 23:54:59,665 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:55:06,597 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:55:06,598 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:55:06,871 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:55:10,522 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-06 23:55:10,522 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Def. 36']
+2025-08-06 23:55:10,523 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:56:59,911 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:57:08,786 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:57:08,786 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:57:08,786 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:57:08,786 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:57:13,584 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:57:14,028 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:57:14,028 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:57:14,028 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:57:14,203 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:57:14,204 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:57:14,204 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:57:14,215 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:57:14,215 - app.main - INFO - ✅ System initialized successfully!
+2025-08-06 23:57:26,877 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:57:26,878 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-06 23:57:27,586 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:57:27,586 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-06 23:57:31,534 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-06 23:57:31,534 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4: Def. 36']
+2025-08-06 23:57:31,534 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-06 23:59:38,791 - app.main - INFO - 🛑 Shutting down system...
+2025-08-06 23:59:47,789 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-06 23:59:47,789 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-06 23:59:47,789 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:59:47,789 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-06 23:59:52,698 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-06 23:59:53,150 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-06 23:59:53,151 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-06 23:59:53,151 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-06 23:59:53,331 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:59:53,332 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-06 23:59:53,332 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-06 23:59:53,343 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-06 23:59:53,343 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:00:01,023 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:00:01,023 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:00:02,374 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:00:02,374 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:00:07,724 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:00:07,725 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Section A, Def. 36']
+2025-08-07 00:00:07,725 - app.query_processor - ERROR - ❌ Query processing failed: name 'QueryResponse' is not defined
+2025-08-07 00:00:07,725 - app.main - ERROR - ❌ Query processing failed: name 'QueryResponse' is not defined
+2025-08-07 00:01:46,490 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:01:55,310 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:01:55,310 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:01:55,310 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:01:55,310 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:02:00,654 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:02:01,095 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:02:01,096 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:02:01,096 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:02:01,279 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:02:01,280 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:02:01,281 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:02:01,291 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-07 00:02:01,291 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:02:08,610 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:02:08,610 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:02:09,204 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:02:09,205 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:02:14,479 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:02:14,480 - app.query_processor - INFO - 📄 Referenced sources: ['Def. 36. Pre-existing Disease']
+2025-08-07 00:02:14,480 - app.main - ERROR - ❌ Query processing failed: 'QueryResponse' object is not subscriptable
+2025-08-07 00:02:31,669 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:03:05,737 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:03:05,737 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:03:05,737 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:03:05,737 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:03:11,132 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:03:11,589 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:03:11,590 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:03:11,590 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:03:11,769 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:03:11,770 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:03:11,771 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:03:11,781 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-07 00:03:11,781 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:03:32,842 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:03:32,843 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:03:33,649 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:03:33,649 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:03:39,151 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:03:39,151 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4: Def. 36']
+2025-08-07 00:03:39,152 - app.main - ERROR - ❌ Query processing failed: 'QueryResponse' object is not subscriptable
+2025-08-07 00:05:20,657 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:05:29,459 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:05:29,459 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:05:29,459 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:05:29,459 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:05:36,644 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:05:37,048 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:05:37,049 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:05:37,049 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:05:37,300 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:05:37,302 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:05:37,306 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:05:37,321 - app.main - INFO - 📚 Documents already exist in vector store, skipping processing
+2025-08-07 00:05:37,321 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:05:45,268 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:05:45,268 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:05:45,902 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:05:45,902 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:05:50,136 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:05:50,136 - app.query_processor - INFO - 📄 Referenced sources: ['Document 4, Def. 36']
+2025-08-07 00:05:50,137 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:05:50,137 - app.main - ERROR - ❌ Query processing failed: app.models.QueryResponse() argument after ** must be a mapping, not QueryResponse
+2025-08-07 00:08:11,136 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:08:20,000 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:08:20,000 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:08:20,000 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:08:20,000 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:08:24,916 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:08:25,305 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:08:25,306 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:08:25,306 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:08:25,491 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:08:25,493 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:08:25,493 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:08:25,493 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:08:25,493 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:08:25,493 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:08:25,543 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:08:25,543 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:08:26,826 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:08:28,075 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:08:29,335 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:08:30,587 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:08:31,833 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:08:33,188 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:08:34,237 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:08:35,462 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:08:36,413 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:08:38,214 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:08:38,286 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-07 00:08:38,286 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:08:38,286 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:08:38,287 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-07 00:08:38,287 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-07 00:08:38,287 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:08:38,287 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-07 00:08:38,287 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-07 00:08:38,287 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 28 texts
+2025-08-07 00:08:39,135 - app.embedding_service - INFO - ✅ Generated 28 embeddings (dimension: 384)
+2025-08-07 00:08:39,135 - app.document_processor - INFO - ⏱️ Embedding took 0.85s (33.0 chunks/sec)
+2025-08-07 00:08:39,136 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:08:39,137 - app.document_processor - INFO - ✅ Total processing time: 0.85s for 28 chunks
+2025-08-07 00:08:39,137 - app.document_processor - INFO - ✅ Finished processing 28 chunks
+2025-08-07 00:08:39,137 - app.vector_store - INFO - 💾 Adding 28 chunks to vector store
+2025-08-07 00:08:39,338 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:08:39,338 - app.vector_store - INFO - ✅ Successfully added 28 chunks to vector store
+2025-08-07 00:08:39,338 - app.document_processor - INFO - ⏱️ Vector storage took 0.20s
+2025-08-07 00:08:39,338 - app.document_processor - INFO - 💾 Stored 28 chunks in vector database
+2025-08-07 00:08:39,338 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 28 chunks
+2025-08-07 00:08:39,339 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:08:39,339 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:08:39,366 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:08:39,366 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:08:40,848 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:08:43,125 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:08:44,750 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:08:46,242 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:08:47,771 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-07 00:08:47,771 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:08:47,771 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:08:47,772 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-07 00:08:47,772 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-07 00:08:47,772 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:08:47,772 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-07 00:08:47,772 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-07 00:08:47,772 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 23 texts
+2025-08-07 00:08:48,290 - app.embedding_service - INFO - ✅ Generated 23 embeddings (dimension: 384)
+2025-08-07 00:08:48,291 - app.document_processor - INFO - ⏱️ Embedding took 0.52s (44.3 chunks/sec)
+2025-08-07 00:08:48,292 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:08:48,292 - app.document_processor - INFO - ✅ Total processing time: 0.52s for 23 chunks
+2025-08-07 00:08:48,292 - app.document_processor - INFO - ✅ Finished processing 23 chunks
+2025-08-07 00:08:48,292 - app.vector_store - INFO - 💾 Adding 23 chunks to vector store
+2025-08-07 00:08:48,401 - app.vector_store - INFO - ✅ Successfully added 23 chunks to vector store
+2025-08-07 00:08:48,401 - app.document_processor - INFO - ⏱️ Vector storage took 0.11s
+2025-08-07 00:08:48,402 - app.document_processor - INFO - 💾 Stored 23 chunks in vector database
+2025-08-07 00:08:48,402 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 23 chunks
+2025-08-07 00:08:48,402 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:08:48,402 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:08:48,405 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:08:48,405 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:08:48,629 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-07 00:08:48,629 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:08:48,629 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:08:48,629 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-07 00:08:48,629 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-07 00:08:48,629 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:08:48,629 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-07 00:08:48,629 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-07 00:08:48,629 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 2 texts
+2025-08-07 00:08:48,740 - app.embedding_service - INFO - ✅ Generated 2 embeddings (dimension: 384)
+2025-08-07 00:08:48,740 - app.document_processor - INFO - ⏱️ Embedding took 0.11s (18.0 chunks/sec)
+2025-08-07 00:08:48,740 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:08:48,740 - app.document_processor - INFO - ✅ Total processing time: 0.11s for 2 chunks
+2025-08-07 00:08:48,740 - app.document_processor - INFO - ✅ Finished processing 2 chunks
+2025-08-07 00:08:48,740 - app.vector_store - INFO - 💾 Adding 2 chunks to vector store
+2025-08-07 00:08:48,745 - app.vector_store - INFO - ✅ Successfully added 2 chunks to vector store
+2025-08-07 00:08:48,745 - app.document_processor - INFO - ⏱️ Vector storage took 0.00s
+2025-08-07 00:08:48,745 - app.document_processor - INFO - 💾 Stored 2 chunks in vector database
+2025-08-07 00:08:48,745 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 2 chunks
+2025-08-07 00:08:48,745 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:08:48,745 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:08:48,770 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:08:48,770 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:08:50,027 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:08:51,858 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:08:53,178 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:08:54,445 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-07 00:08:54,445 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:08:54,445 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:08:54,445 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-07 00:08:54,445 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-07 00:08:54,446 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:08:54,446 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-07 00:08:54,446 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-07 00:08:54,446 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 36 texts
+2025-08-07 00:08:55,174 - app.embedding_service - INFO - ✅ Generated 36 embeddings (dimension: 384)
+2025-08-07 00:08:55,174 - app.document_processor - INFO - ⏱️ Embedding took 0.73s (49.4 chunks/sec)
+2025-08-07 00:08:55,175 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:08:55,175 - app.document_processor - INFO - ✅ Total processing time: 0.73s for 36 chunks
+2025-08-07 00:08:55,175 - app.document_processor - INFO - ✅ Finished processing 36 chunks
+2025-08-07 00:08:55,175 - app.vector_store - INFO - 💾 Adding 36 chunks to vector store
+2025-08-07 00:08:55,348 - app.vector_store - INFO - ✅ Successfully added 36 chunks to vector store
+2025-08-07 00:08:55,349 - app.document_processor - INFO - ⏱️ Vector storage took 0.17s
+2025-08-07 00:08:55,349 - app.document_processor - INFO - 💾 Stored 36 chunks in vector database
+2025-08-07 00:08:55,349 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 36 chunks
+2025-08-07 00:08:55,349 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:08:55,349 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:08:55,365 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:08:55,365 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:08:57,719 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:08:59,402 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:09:01,238 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:09:01,577 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-07 00:09:01,578 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:09:01,578 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:09:01,578 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-07 00:09:01,578 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-07 00:09:01,578 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:09:01,578 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-07 00:09:01,578 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-07 00:09:01,578 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 21 texts
+2025-08-07 00:09:02,070 - app.embedding_service - INFO - ✅ Generated 21 embeddings (dimension: 384)
+2025-08-07 00:09:02,070 - app.document_processor - INFO - ⏱️ Embedding took 0.49s (42.7 chunks/sec)
+2025-08-07 00:09:02,072 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:09:02,072 - app.document_processor - INFO - ✅ Total processing time: 0.49s for 21 chunks
+2025-08-07 00:09:02,073 - app.document_processor - INFO - ✅ Finished processing 21 chunks
+2025-08-07 00:09:02,074 - app.vector_store - INFO - 💾 Adding 21 chunks to vector store
+2025-08-07 00:09:02,203 - app.vector_store - INFO - ✅ Successfully added 21 chunks to vector store
+2025-08-07 00:09:02,203 - app.document_processor - INFO - ⏱️ Vector storage took 0.13s
+2025-08-07 00:09:02,203 - app.document_processor - INFO - 💾 Stored 21 chunks in vector database
+2025-08-07 00:09:02,204 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 21 chunks
+2025-08-07 00:09:02,204 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:09:32,004 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:09:32,006 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:09:32,681 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:09:32,681 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:09:39,101 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.5
+2025-08-07 00:09:39,102 - app.query_processor - INFO - 📄 Referenced sources: []
+2025-08-07 00:09:39,103 - app.main - ERROR - ❌ Query processing failed: 'QueryResponse' object is not subscriptable
+2025-08-07 00:11:21,661 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:13:02,124 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:13:02,124 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:13:02,124 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:13:02,124 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:13:06,536 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:13:07,022 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:13:07,022 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:13:07,022 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:13:07,190 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:13:07,192 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:13:07,192 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:13:07,192 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:13:07,192 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:13:07,192 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:13:07,241 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:13:07,242 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:13:08,476 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:13:09,722 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:13:10,987 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:13:12,223 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:13:13,470 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:13:14,828 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:13:15,876 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:13:17,090 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:13:18,010 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:13:19,694 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:13:19,766 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-07 00:13:19,767 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:13:19,767 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:13:19,767 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-07 00:13:19,767 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-07 00:13:19,767 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:13:19,767 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-07 00:13:19,767 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-07 00:13:19,767 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 28 texts
+2025-08-07 00:13:20,776 - app.embedding_service - INFO - ✅ Generated 28 embeddings (dimension: 384)
+2025-08-07 00:13:20,776 - app.document_processor - INFO - ⏱️ Embedding took 1.01s (27.7 chunks/sec)
+2025-08-07 00:13:20,779 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:13:20,779 - app.document_processor - INFO - ✅ Total processing time: 1.01s for 28 chunks
+2025-08-07 00:13:20,780 - app.document_processor - INFO - ✅ Finished processing 28 chunks
+2025-08-07 00:13:20,780 - app.vector_store - INFO - 💾 Adding 28 chunks to vector store
+2025-08-07 00:13:21,044 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:13:21,044 - app.vector_store - INFO - ✅ Successfully added 28 chunks to vector store
+2025-08-07 00:13:21,044 - app.document_processor - INFO - ⏱️ Vector storage took 0.26s
+2025-08-07 00:13:21,044 - app.document_processor - INFO - 💾 Stored 28 chunks in vector database
+2025-08-07 00:13:21,046 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 28 chunks
+2025-08-07 00:13:21,046 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:13:21,046 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:13:21,074 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:13:21,074 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:13:22,309 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:13:24,526 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:13:26,055 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:13:27,567 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:13:29,104 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-07 00:13:29,105 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:13:29,105 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:13:29,105 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-07 00:13:29,105 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-07 00:13:29,105 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:13:29,105 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-07 00:13:29,105 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-07 00:13:29,105 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 23 texts
+2025-08-07 00:13:29,564 - app.embedding_service - INFO - ✅ Generated 23 embeddings (dimension: 384)
+2025-08-07 00:13:29,566 - app.document_processor - INFO - ⏱️ Embedding took 0.46s (50.0 chunks/sec)
+2025-08-07 00:13:29,567 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:13:29,567 - app.document_processor - INFO - ✅ Total processing time: 0.46s for 23 chunks
+2025-08-07 00:13:29,567 - app.document_processor - INFO - ✅ Finished processing 23 chunks
+2025-08-07 00:13:29,567 - app.vector_store - INFO - 💾 Adding 23 chunks to vector store
+2025-08-07 00:13:29,679 - app.vector_store - INFO - ✅ Successfully added 23 chunks to vector store
+2025-08-07 00:13:29,679 - app.document_processor - INFO - ⏱️ Vector storage took 0.11s
+2025-08-07 00:13:29,679 - app.document_processor - INFO - 💾 Stored 23 chunks in vector database
+2025-08-07 00:13:29,680 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 23 chunks
+2025-08-07 00:13:29,680 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:13:29,680 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:13:29,683 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:13:29,683 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:13:29,910 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-07 00:13:29,910 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:13:29,910 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:13:29,910 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-07 00:13:29,910 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-07 00:13:29,910 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:13:29,911 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-07 00:13:29,911 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-07 00:13:29,911 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 2 texts
+2025-08-07 00:13:30,021 - app.embedding_service - INFO - ✅ Generated 2 embeddings (dimension: 384)
+2025-08-07 00:13:30,021 - app.document_processor - INFO - ⏱️ Embedding took 0.11s (18.1 chunks/sec)
+2025-08-07 00:13:30,021 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:13:30,021 - app.document_processor - INFO - ✅ Total processing time: 0.11s for 2 chunks
+2025-08-07 00:13:30,021 - app.document_processor - INFO - ✅ Finished processing 2 chunks
+2025-08-07 00:13:30,021 - app.vector_store - INFO - 💾 Adding 2 chunks to vector store
+2025-08-07 00:13:30,025 - app.vector_store - INFO - ✅ Successfully added 2 chunks to vector store
+2025-08-07 00:13:30,025 - app.document_processor - INFO - ⏱️ Vector storage took 0.00s
+2025-08-07 00:13:30,025 - app.document_processor - INFO - 💾 Stored 2 chunks in vector database
+2025-08-07 00:13:30,025 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 2 chunks
+2025-08-07 00:13:30,025 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:13:30,025 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:13:30,051 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:13:30,051 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:13:31,236 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:13:32,946 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:13:34,231 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:13:35,412 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-07 00:13:35,413 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:13:35,413 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:13:35,413 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-07 00:13:35,413 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-07 00:13:35,413 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:13:35,413 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-07 00:13:35,413 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-07 00:13:35,413 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 36 texts
+2025-08-07 00:13:36,026 - app.embedding_service - INFO - ✅ Generated 36 embeddings (dimension: 384)
+2025-08-07 00:13:36,026 - app.document_processor - INFO - ⏱️ Embedding took 0.61s (58.7 chunks/sec)
+2025-08-07 00:13:36,027 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:13:36,027 - app.document_processor - INFO - ✅ Total processing time: 0.61s for 36 chunks
+2025-08-07 00:13:36,027 - app.document_processor - INFO - ✅ Finished processing 36 chunks
+2025-08-07 00:13:36,027 - app.vector_store - INFO - 💾 Adding 36 chunks to vector store
+2025-08-07 00:13:36,115 - app.vector_store - INFO - ✅ Successfully added 36 chunks to vector store
+2025-08-07 00:13:36,115 - app.document_processor - INFO - ⏱️ Vector storage took 0.09s
+2025-08-07 00:13:36,115 - app.document_processor - INFO - 💾 Stored 36 chunks in vector database
+2025-08-07 00:13:36,115 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 36 chunks
+2025-08-07 00:13:36,115 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:13:36,115 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:13:36,130 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:13:36,130 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:13:38,149 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:13:39,783 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:13:41,557 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:13:41,860 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-07 00:13:41,861 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:13:41,861 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:13:41,861 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-07 00:13:41,861 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-07 00:13:41,861 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:13:41,861 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-07 00:13:41,861 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-07 00:13:41,861 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 21 texts
+2025-08-07 00:13:42,192 - app.embedding_service - INFO - ✅ Generated 21 embeddings (dimension: 384)
+2025-08-07 00:13:42,192 - app.document_processor - INFO - ⏱️ Embedding took 0.33s (63.4 chunks/sec)
+2025-08-07 00:13:42,193 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:13:42,193 - app.document_processor - INFO - ✅ Total processing time: 0.33s for 21 chunks
+2025-08-07 00:13:42,193 - app.document_processor - INFO - ✅ Finished processing 21 chunks
+2025-08-07 00:13:42,193 - app.vector_store - INFO - 💾 Adding 21 chunks to vector store
+2025-08-07 00:13:42,357 - app.vector_store - INFO - ✅ Successfully added 21 chunks to vector store
+2025-08-07 00:13:42,357 - app.document_processor - INFO - ⏱️ Vector storage took 0.16s
+2025-08-07 00:13:42,357 - app.document_processor - INFO - 💾 Stored 21 chunks in vector database
+2025-08-07 00:13:42,357 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 21 chunks
+2025-08-07 00:13:42,357 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:13:49,139 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:13:49,140 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:13:49,701 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:13:49,701 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:13:53,165 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.1
+2025-08-07 00:13:53,165 - app.query_processor - INFO - 📄 Referenced sources: []
+2025-08-07 00:13:53,165 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:15:46,775 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:15:56,310 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:15:56,310 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:15:56,310 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:15:56,310 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:16:02,844 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:16:03,196 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:16:03,196 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:16:03,197 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:16:03,387 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:16:03,388 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:16:03,388 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:16:03,388 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:16:03,388 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:16:03,388 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:16:03,438 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:16:03,438 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:16:04,769 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:16:06,011 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:16:07,278 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:16:08,518 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:16:09,763 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:16:11,118 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:16:12,190 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:16:13,420 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:16:14,339 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:16:15,854 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:16:15,923 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-07 00:16:15,923 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:16:15,923 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:16:15,924 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-07 00:16:15,924 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-07 00:16:15,924 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:16:15,924 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-07 00:16:15,924 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-07 00:16:15,924 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 28 texts
+2025-08-07 00:16:16,799 - app.embedding_service - INFO - ✅ Generated 28 embeddings (dimension: 384)
+2025-08-07 00:16:16,801 - app.document_processor - INFO - ⏱️ Embedding took 0.88s (31.9 chunks/sec)
+2025-08-07 00:16:16,812 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:16:16,812 - app.document_processor - INFO - ✅ Total processing time: 0.89s for 28 chunks
+2025-08-07 00:16:16,812 - app.document_processor - INFO - ✅ Finished processing 28 chunks
+2025-08-07 00:16:16,813 - app.vector_store - INFO - 💾 Adding 28 chunks to vector store
+2025-08-07 00:16:17,325 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:16:17,325 - app.vector_store - INFO - ✅ Successfully added 28 chunks to vector store
+2025-08-07 00:16:17,325 - app.document_processor - INFO - ⏱️ Vector storage took 0.51s
+2025-08-07 00:16:17,325 - app.document_processor - INFO - 💾 Stored 28 chunks in vector database
+2025-08-07 00:16:17,327 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 28 chunks
+2025-08-07 00:16:17,327 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:16:17,327 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:16:17,359 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:16:17,359 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:16:18,781 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:16:21,206 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:16:22,700 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:16:24,201 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:16:25,728 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-07 00:16:25,728 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:16:25,728 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:16:25,728 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-07 00:16:25,728 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-07 00:16:25,728 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:16:25,728 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-07 00:16:25,728 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-07 00:16:25,728 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 23 texts
+2025-08-07 00:16:26,383 - app.embedding_service - INFO - ✅ Generated 23 embeddings (dimension: 384)
+2025-08-07 00:16:26,383 - app.document_processor - INFO - ⏱️ Embedding took 0.66s (35.1 chunks/sec)
+2025-08-07 00:16:26,384 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:16:26,384 - app.document_processor - INFO - ✅ Total processing time: 0.66s for 23 chunks
+2025-08-07 00:16:26,384 - app.document_processor - INFO - ✅ Finished processing 23 chunks
+2025-08-07 00:16:26,384 - app.vector_store - INFO - 💾 Adding 23 chunks to vector store
+2025-08-07 00:16:26,535 - app.vector_store - INFO - ✅ Successfully added 23 chunks to vector store
+2025-08-07 00:16:26,536 - app.document_processor - INFO - ⏱️ Vector storage took 0.15s
+2025-08-07 00:16:26,536 - app.document_processor - INFO - 💾 Stored 23 chunks in vector database
+2025-08-07 00:16:26,536 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 23 chunks
+2025-08-07 00:16:26,536 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:16:26,536 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:16:26,539 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:16:26,539 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:16:26,766 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-07 00:16:26,766 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:16:26,766 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:16:26,766 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-07 00:16:26,766 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-07 00:16:26,766 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:16:26,766 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-07 00:16:26,766 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-07 00:16:26,766 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 2 texts
+2025-08-07 00:16:26,878 - app.embedding_service - INFO - ✅ Generated 2 embeddings (dimension: 384)
+2025-08-07 00:16:26,878 - app.document_processor - INFO - ⏱️ Embedding took 0.11s (17.9 chunks/sec)
+2025-08-07 00:16:26,878 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:16:26,878 - app.document_processor - INFO - ✅ Total processing time: 0.11s for 2 chunks
+2025-08-07 00:16:26,878 - app.document_processor - INFO - ✅ Finished processing 2 chunks
+2025-08-07 00:16:26,878 - app.vector_store - INFO - 💾 Adding 2 chunks to vector store
+2025-08-07 00:16:26,885 - app.vector_store - INFO - ✅ Successfully added 2 chunks to vector store
+2025-08-07 00:16:26,885 - app.document_processor - INFO - ⏱️ Vector storage took 0.01s
+2025-08-07 00:16:26,885 - app.document_processor - INFO - 💾 Stored 2 chunks in vector database
+2025-08-07 00:16:26,885 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 2 chunks
+2025-08-07 00:16:26,885 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:16:26,885 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:16:26,910 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:16:26,910 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:16:28,067 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:16:29,874 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:16:31,180 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:16:32,388 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-07 00:16:32,388 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:16:32,388 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:16:32,388 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-07 00:16:32,388 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-07 00:16:32,388 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:16:32,388 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-07 00:16:32,388 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-07 00:16:32,388 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 36 texts
+2025-08-07 00:16:33,052 - app.embedding_service - INFO - ✅ Generated 36 embeddings (dimension: 384)
+2025-08-07 00:16:33,052 - app.document_processor - INFO - ⏱️ Embedding took 0.66s (54.2 chunks/sec)
+2025-08-07 00:16:33,053 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:16:33,053 - app.document_processor - INFO - ✅ Total processing time: 0.67s for 36 chunks
+2025-08-07 00:16:33,053 - app.document_processor - INFO - ✅ Finished processing 36 chunks
+2025-08-07 00:16:33,053 - app.vector_store - INFO - 💾 Adding 36 chunks to vector store
+2025-08-07 00:16:33,152 - app.vector_store - INFO - ✅ Successfully added 36 chunks to vector store
+2025-08-07 00:16:33,152 - app.document_processor - INFO - ⏱️ Vector storage took 0.10s
+2025-08-07 00:16:33,152 - app.document_processor - INFO - 💾 Stored 36 chunks in vector database
+2025-08-07 00:16:33,153 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 36 chunks
+2025-08-07 00:16:33,153 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:16:33,153 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:16:33,172 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:16:33,172 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:16:35,352 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:16:36,989 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:16:38,774 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:16:39,085 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-07 00:16:39,086 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:16:39,086 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:16:39,086 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-07 00:16:39,086 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-07 00:16:39,086 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:16:39,086 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-07 00:16:39,086 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-07 00:16:39,086 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 21 texts
+2025-08-07 00:16:39,493 - app.embedding_service - INFO - ✅ Generated 21 embeddings (dimension: 384)
+2025-08-07 00:16:39,495 - app.document_processor - INFO - ⏱️ Embedding took 0.41s (51.4 chunks/sec)
+2025-08-07 00:16:39,505 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:16:39,505 - app.document_processor - INFO - ✅ Total processing time: 0.42s for 21 chunks
+2025-08-07 00:16:39,505 - app.document_processor - INFO - ✅ Finished processing 21 chunks
+2025-08-07 00:16:39,505 - app.vector_store - INFO - 💾 Adding 21 chunks to vector store
+2025-08-07 00:16:39,599 - app.vector_store - INFO - ✅ Successfully added 21 chunks to vector store
+2025-08-07 00:16:39,599 - app.document_processor - INFO - ⏱️ Vector storage took 0.09s
+2025-08-07 00:16:39,599 - app.document_processor - INFO - 💾 Stored 21 chunks in vector database
+2025-08-07 00:16:39,599 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 21 chunks
+2025-08-07 00:16:39,599 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:16:48,105 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:16:48,106 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:16:48,760 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:16:48,761 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:16:48,761 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:16:48,761 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:16:48,761 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:16:53,676 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.9
+2025-08-07 00:16:53,676 - app.query_processor - INFO - 📄 Referenced sources: ['Document 10 Section H (ii) b.']
+2025-08-07 00:16:53,677 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:21:12,419 - app.main - INFO - 🔍 Processing query: 6M, knee surgery, Pune, 3-month policy
+2025-08-07 00:21:12,419 - app.query_processor - INFO - 🔍 Processing query: 6M, knee surgery, Pune, 3-month policy
+2025-08-07 00:21:13,239 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:21:13,239 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.043): to the
+Policy Schedule under the Policy.
+extent of prior coverage.
+We will not be liable to make any payment under this
+Policy in connection with or in respect of any expenses
+whatsoever incurred in c...
+2025-08-07 00:21:13,239 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.043): to the
+Policy Schedule under the Policy.
+extent of prior coverage.
+We will not be liable to make any payment under this
+Policy in connection with or in respect of any expenses
+whatsoever incurred in c...
+2025-08-07 00:21:13,239 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.043): to the
+Policy Schedule under the Policy.
+extent of prior coverage.
+We will not be liable to make any payment under this
+Policy in connection with or in respect of any expenses
+whatsoever incurred in c...
+2025-08-07 00:21:18,203 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.6
+2025-08-07 00:21:18,204 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1: Orthopaedic procedures', 'Document 9 & 10: Surgical Procedures']
+2025-08-07 00:21:18,204 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:28:11,962 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:28:22,283 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:28:22,283 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:28:22,283 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:28:22,283 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:28:27,319 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:28:27,720 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:28:27,721 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:28:27,721 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:28:27,913 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:28:27,915 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:28:27,915 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:28:27,915 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:28:27,915 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:28:27,915 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:28:27,965 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:28:27,965 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:28:29,269 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:28:30,522 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:28:31,793 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:28:33,026 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:28:34,268 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:28:35,617 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:28:36,681 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:28:37,907 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:28:38,838 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:28:40,373 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:28:40,444 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-07 00:28:40,444 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:28:40,444 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:28:40,445 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-07 00:28:40,445 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-07 00:28:40,445 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:28:40,445 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-07 00:28:40,445 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-07 00:28:40,445 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 28 texts
+2025-08-07 00:28:41,417 - app.embedding_service - INFO - ✅ Generated 28 embeddings (dimension: 384)
+2025-08-07 00:28:41,417 - app.document_processor - INFO - ⏱️ Embedding took 0.97s (28.8 chunks/sec)
+2025-08-07 00:28:41,419 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:28:41,419 - app.document_processor - INFO - ✅ Total processing time: 0.97s for 28 chunks
+2025-08-07 00:28:41,419 - app.document_processor - INFO - ✅ Finished processing 28 chunks
+2025-08-07 00:28:41,419 - app.vector_store - INFO - 💾 Adding 28 chunks to vector store
+2025-08-07 00:28:41,819 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:28:41,819 - app.vector_store - INFO - ✅ Successfully added 28 chunks to vector store
+2025-08-07 00:28:41,819 - app.document_processor - INFO - ⏱️ Vector storage took 0.40s
+2025-08-07 00:28:41,819 - app.document_processor - INFO - 💾 Stored 28 chunks in vector database
+2025-08-07 00:28:41,821 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 28 chunks
+2025-08-07 00:28:41,821 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:28:41,821 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:28:41,849 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:28:41,849 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:28:43,064 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:28:45,246 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:28:46,755 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:28:48,245 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:28:49,780 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-07 00:28:49,780 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:28:49,780 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:28:49,781 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-07 00:28:49,781 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-07 00:28:49,781 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:28:49,781 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-07 00:28:49,781 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-07 00:28:49,781 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 23 texts
+2025-08-07 00:28:50,297 - app.embedding_service - INFO - ✅ Generated 23 embeddings (dimension: 384)
+2025-08-07 00:28:50,299 - app.document_processor - INFO - ⏱️ Embedding took 0.52s (44.4 chunks/sec)
+2025-08-07 00:28:50,300 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:28:50,300 - app.document_processor - INFO - ✅ Total processing time: 0.52s for 23 chunks
+2025-08-07 00:28:50,301 - app.document_processor - INFO - ✅ Finished processing 23 chunks
+2025-08-07 00:28:50,301 - app.vector_store - INFO - 💾 Adding 23 chunks to vector store
+2025-08-07 00:28:50,452 - app.vector_store - INFO - ✅ Successfully added 23 chunks to vector store
+2025-08-07 00:28:50,452 - app.document_processor - INFO - ⏱️ Vector storage took 0.15s
+2025-08-07 00:28:50,452 - app.document_processor - INFO - 💾 Stored 23 chunks in vector database
+2025-08-07 00:28:50,453 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 23 chunks
+2025-08-07 00:28:50,453 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:28:50,453 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:28:50,456 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:28:50,456 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:28:50,683 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-07 00:28:50,683 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:28:50,683 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:28:50,683 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-07 00:28:50,683 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-07 00:28:50,683 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:28:50,683 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-07 00:28:50,683 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-07 00:28:50,683 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 2 texts
+2025-08-07 00:28:50,790 - app.embedding_service - INFO - ✅ Generated 2 embeddings (dimension: 384)
+2025-08-07 00:28:50,790 - app.document_processor - INFO - ⏱️ Embedding took 0.11s (18.7 chunks/sec)
+2025-08-07 00:28:50,790 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:28:50,790 - app.document_processor - INFO - ✅ Total processing time: 0.11s for 2 chunks
+2025-08-07 00:28:50,790 - app.document_processor - INFO - ✅ Finished processing 2 chunks
+2025-08-07 00:28:50,790 - app.vector_store - INFO - 💾 Adding 2 chunks to vector store
+2025-08-07 00:28:50,796 - app.vector_store - INFO - ✅ Successfully added 2 chunks to vector store
+2025-08-07 00:28:50,797 - app.document_processor - INFO - ⏱️ Vector storage took 0.01s
+2025-08-07 00:28:50,797 - app.document_processor - INFO - 💾 Stored 2 chunks in vector database
+2025-08-07 00:28:50,797 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 2 chunks
+2025-08-07 00:28:50,797 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:28:50,797 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:28:50,822 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:28:50,822 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:28:51,998 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:28:53,749 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:28:55,042 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:28:56,244 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-07 00:28:56,244 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:28:56,244 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:28:56,245 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-07 00:28:56,245 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-07 00:28:56,245 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:28:56,245 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-07 00:28:56,245 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-07 00:28:56,245 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 36 texts
+2025-08-07 00:28:56,930 - app.embedding_service - INFO - ✅ Generated 36 embeddings (dimension: 384)
+2025-08-07 00:28:56,930 - app.document_processor - INFO - ⏱️ Embedding took 0.69s (52.5 chunks/sec)
+2025-08-07 00:28:56,931 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:28:56,931 - app.document_processor - INFO - ✅ Total processing time: 0.69s for 36 chunks
+2025-08-07 00:28:56,931 - app.document_processor - INFO - ✅ Finished processing 36 chunks
+2025-08-07 00:28:56,931 - app.vector_store - INFO - 💾 Adding 36 chunks to vector store
+2025-08-07 00:28:57,040 - app.vector_store - INFO - ✅ Successfully added 36 chunks to vector store
+2025-08-07 00:28:57,040 - app.document_processor - INFO - ⏱️ Vector storage took 0.11s
+2025-08-07 00:28:57,040 - app.document_processor - INFO - 💾 Stored 36 chunks in vector database
+2025-08-07 00:28:57,041 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 36 chunks
+2025-08-07 00:28:57,041 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:28:57,041 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:28:57,057 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:28:57,057 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:28:59,220 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:29:00,851 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:29:02,637 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:29:02,945 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-07 00:29:02,945 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:29:02,945 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:29:02,945 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-07 00:29:02,945 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-07 00:29:02,945 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:29:02,945 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-07 00:29:02,945 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-07 00:29:02,945 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 21 texts
+2025-08-07 00:29:03,337 - app.embedding_service - INFO - ✅ Generated 21 embeddings (dimension: 384)
+2025-08-07 00:29:03,340 - app.document_processor - INFO - ⏱️ Embedding took 0.40s (53.2 chunks/sec)
+2025-08-07 00:29:03,341 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:29:03,341 - app.document_processor - INFO - ✅ Total processing time: 0.40s for 21 chunks
+2025-08-07 00:29:03,341 - app.document_processor - INFO - ✅ Finished processing 21 chunks
+2025-08-07 00:29:03,341 - app.vector_store - INFO - 💾 Adding 21 chunks to vector store
+2025-08-07 00:29:03,442 - app.vector_store - INFO - ✅ Successfully added 21 chunks to vector store
+2025-08-07 00:29:03,442 - app.document_processor - INFO - ⏱️ Vector storage took 0.10s
+2025-08-07 00:29:03,442 - app.document_processor - INFO - 💾 Stored 21 chunks in vector database
+2025-08-07 00:29:03,443 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 21 chunks
+2025-08-07 00:29:03,443 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:29:10,308 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:29:10,308 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:29:10,847 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:29:10,848 - app.query_processor - INFO - 📄 Found 10 relevant documents
+2025-08-07 00:29:10,848 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:29:10,848 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:29:10,848 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.309): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:29:16,114 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.6
+2025-08-07 00:29:16,114 - app.query_processor - INFO - 📄 Referenced sources: ['Document 8, section h.ii.b']
+2025-08-07 00:29:16,115 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:31:37,600 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:31:42,833 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:31:42,861 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-08-07 00:31:43,016 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:31:43,016 - app.vector_store - INFO - ✅ ChromaDB client initialized.
+2025-08-07 00:31:43,016 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:31:43,016 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:31:43,016 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:31:43,066 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:31:43,066 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:31:44,356 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:31:45,581 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:31:46,774 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:31:48,050 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:31:49,227 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:31:50,513 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:31:51,580 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:31:52,719 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:31:53,863 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:31:55,077 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:31:55,147 - app.document_processor - INFO - 📝 Extracted 379302 characters from  policy_doc_4.pdf
+2025-08-07 00:31:55,147 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:31:55,147 - app.document_processor - INFO - 🔪 Smart chunking 379302 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:31:55,148 - app.document_processor - INFO - ✂️ Created 28 chunks with improved strategy
+2025-08-07 00:31:55,148 - app.document_processor - INFO - ✂️ Split into 28 chunks
+2025-08-07 00:31:55,148 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:31:55,148 - app.document_processor - INFO - 🔄 Processing 28 chunks with smaller model...
+2025-08-07 00:31:55,148 - app.document_processor - INFO - ⚡ Generating embeddings for all 28 chunks...
+2025-08-07 00:31:55,148 - app.document_processor - ERROR - ❌ Failed to process chunks: 'EmbeddingService' object has no attribute 'generate_batch_embeddings'
+2025-08-07 00:31:55,148 - app.document_processor - INFO - ✅ Finished processing 0 chunks
+2025-08-07 00:31:55,148 - app.document_processor - ERROR - ❌ Document processing failed for  policy_doc_4.pdf: VectorStore.add_documents() missing 4 required positional arguments: 'ids', 'documents', 'embeddings', and 'metadatas'
+2025-08-07 00:31:55,148 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 0 chunks
+2025-08-07 00:31:55,149 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:31:55,149 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:31:55,176 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:31:55,176 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:31:56,992 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:31:58,461 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:31:59,884 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:32:01,426 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:32:02,876 - app.document_processor - INFO - 📝 Extracted 222454 characters from policy_doc_5.pdf
+2025-08-07 00:32:02,876 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:32:02,877 - app.document_processor - INFO - 🔪 Smart chunking 222454 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:32:02,877 - app.document_processor - INFO - ✂️ Created 23 chunks with improved strategy
+2025-08-07 00:32:02,877 - app.document_processor - INFO - ✂️ Split into 23 chunks
+2025-08-07 00:32:02,877 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:32:02,877 - app.document_processor - INFO - 🔄 Processing 23 chunks with smaller model...
+2025-08-07 00:32:02,877 - app.document_processor - INFO - ⚡ Generating embeddings for all 23 chunks...
+2025-08-07 00:32:02,877 - app.document_processor - ERROR - ❌ Failed to process chunks: 'EmbeddingService' object has no attribute 'generate_batch_embeddings'
+2025-08-07 00:32:02,877 - app.document_processor - INFO - ✅ Finished processing 0 chunks
+2025-08-07 00:32:02,877 - app.document_processor - ERROR - ❌ Document processing failed for policy_doc_5.pdf: VectorStore.add_documents() missing 4 required positional arguments: 'ids', 'documents', 'embeddings', and 'metadatas'
+2025-08-07 00:32:02,877 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 0 chunks
+2025-08-07 00:32:02,877 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:32:02,877 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:32:02,880 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:32:02,880 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 📝 Extracted 7799 characters from policy_doc_3.pdf
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 🔪 Smart chunking 7799 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:32:03,101 - app.document_processor - INFO - ✂️ Created 2 chunks with improved strategy
+2025-08-07 00:32:03,101 - app.document_processor - INFO - ✂️ Split into 2 chunks
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 🔄 Processing 2 chunks with smaller model...
+2025-08-07 00:32:03,101 - app.document_processor - INFO - ⚡ Generating embeddings for all 2 chunks...
+2025-08-07 00:32:03,101 - app.document_processor - ERROR - ❌ Failed to process chunks: 'EmbeddingService' object has no attribute 'generate_batch_embeddings'
+2025-08-07 00:32:03,101 - app.document_processor - INFO - ✅ Finished processing 0 chunks
+2025-08-07 00:32:03,101 - app.document_processor - ERROR - ❌ Document processing failed for policy_doc_3.pdf: VectorStore.add_documents() missing 4 required positional arguments: 'ids', 'documents', 'embeddings', and 'metadatas'
+2025-08-07 00:32:03,101 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 0 chunks
+2025-08-07 00:32:03,101 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:32:03,101 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:32:03,127 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:32:03,127 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:32:04,890 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:32:06,142 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:32:07,360 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:32:08,476 - app.document_processor - INFO - 📝 Extracted 156471 characters from policy_doc_2.pdf
+2025-08-07 00:32:08,476 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:32:08,476 - app.document_processor - INFO - 🔪 Smart chunking 156471 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:32:08,476 - app.document_processor - INFO - ✂️ Created 36 chunks with improved strategy
+2025-08-07 00:32:08,476 - app.document_processor - INFO - ✂️ Split into 36 chunks
+2025-08-07 00:32:08,476 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:32:08,476 - app.document_processor - INFO - 🔄 Processing 36 chunks with smaller model...
+2025-08-07 00:32:08,476 - app.document_processor - INFO - ⚡ Generating embeddings for all 36 chunks...
+2025-08-07 00:32:08,476 - app.document_processor - ERROR - ❌ Failed to process chunks: 'EmbeddingService' object has no attribute 'generate_batch_embeddings'
+2025-08-07 00:32:08,476 - app.document_processor - INFO - ✅ Finished processing 0 chunks
+2025-08-07 00:32:08,476 - app.document_processor - ERROR - ❌ Document processing failed for policy_doc_2.pdf: VectorStore.add_documents() missing 4 required positional arguments: 'ids', 'documents', 'embeddings', and 'metadatas'
+2025-08-07 00:32:08,477 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 0 chunks
+2025-08-07 00:32:08,477 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:32:08,477 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:32:08,492 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:32:08,492 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:32:10,454 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:32:12,091 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:32:13,887 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:32:13,959 - app.document_processor - INFO - 📝 Extracted 156436 characters from policy_doc_1.pdf
+2025-08-07 00:32:13,960 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:32:13,960 - app.document_processor - INFO - 🔪 Smart chunking 156436 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:32:13,960 - app.document_processor - INFO - ✂️ Created 21 chunks with improved strategy
+2025-08-07 00:32:13,960 - app.document_processor - INFO - ✂️ Split into 21 chunks
+2025-08-07 00:32:13,960 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:32:13,960 - app.document_processor - INFO - 🔄 Processing 21 chunks with smaller model...
+2025-08-07 00:32:13,960 - app.document_processor - INFO - ⚡ Generating embeddings for all 21 chunks...
+2025-08-07 00:32:13,960 - app.document_processor - ERROR - ❌ Failed to process chunks: 'EmbeddingService' object has no attribute 'generate_batch_embeddings'
+2025-08-07 00:32:13,960 - app.document_processor - INFO - ✅ Finished processing 0 chunks
+2025-08-07 00:32:13,960 - app.document_processor - ERROR - ❌ Document processing failed for policy_doc_1.pdf: VectorStore.add_documents() missing 4 required positional arguments: 'ids', 'documents', 'embeddings', and 'metadatas'
+2025-08-07 00:32:13,960 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 0 chunks
+2025-08-07 00:32:13,960 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:34:19,666 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:34:26,231 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:34:26,231 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:34:26,231 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:34:26,231 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:34:31,514 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:34:31,941 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:34:31,942 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:34:31,942 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:34:32,140 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:34:32,142 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:34:32,142 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:34:32,142 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:34:32,142 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:34:32,142 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:34:32,192 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:34:32,192 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:34:33,575 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:34:34,775 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:34:35,927 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:34:37,140 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:34:38,363 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:34:39,645 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:34:40,685 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:34:41,893 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:34:42,790 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:34:44,111 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:34:44,169 - app.document_processor - INFO - 📝 Extracted 330201 characters from  policy_doc_4.pdf
+2025-08-07 00:34:44,169 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:34:44,169 - app.document_processor - INFO - 🔪 Smart chunking 330201 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:34:44,175 - app.document_processor - INFO - ✂️ Created 276 chunks with improved strategy
+2025-08-07 00:34:44,175 - app.document_processor - INFO - ✂️ Split into 276 chunks
+2025-08-07 00:34:44,175 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:34:44,175 - app.document_processor - INFO - 🔄 Processing 276 chunks with smaller model...
+2025-08-07 00:34:44,175 - app.document_processor - INFO - ⚡ Generating embeddings for all 276 chunks...
+2025-08-07 00:34:44,175 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 276 texts
+2025-08-07 00:34:48,180 - app.embedding_service - INFO - ✅ Generated 276 embeddings (dimension: 384)
+2025-08-07 00:34:48,181 - app.document_processor - INFO - ⏱️ Embedding took 4.01s (68.9 chunks/sec)
+2025-08-07 00:34:48,188 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:34:48,188 - app.document_processor - INFO - ✅ Total processing time: 4.01s for 276 chunks
+2025-08-07 00:34:48,189 - app.document_processor - INFO - ✅ Finished processing 276 chunks
+2025-08-07 00:34:48,189 - app.vector_store - INFO - 💾 Adding 276 chunks to vector store
+2025-08-07 00:34:49,065 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:34:49,065 - app.vector_store - INFO - ✅ Successfully added 276 chunks to vector store
+2025-08-07 00:34:49,065 - app.document_processor - INFO - ⏱️ Vector storage took 0.88s
+2025-08-07 00:34:49,065 - app.document_processor - INFO - 💾 Stored 276 chunks in vector database
+2025-08-07 00:34:49,067 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 276 chunks
+2025-08-07 00:34:49,067 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:34:49,067 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:34:49,095 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:34:49,095 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:34:50,284 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:34:52,453 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:34:53,868 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:34:55,330 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:34:56,320 - app.document_processor - INFO - 📝 Extracted 190917 characters from policy_doc_5.pdf
+2025-08-07 00:34:56,320 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:34:56,320 - app.document_processor - INFO - 🔪 Smart chunking 190917 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:34:56,323 - app.document_processor - INFO - ✂️ Created 154 chunks with improved strategy
+2025-08-07 00:34:56,323 - app.document_processor - INFO - ✂️ Split into 154 chunks
+2025-08-07 00:34:56,323 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:34:56,323 - app.document_processor - INFO - 🔄 Processing 154 chunks with smaller model...
+2025-08-07 00:34:56,323 - app.document_processor - INFO - ⚡ Generating embeddings for all 154 chunks...
+2025-08-07 00:34:56,323 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 154 texts
+2025-08-07 00:34:58,415 - app.embedding_service - INFO - ✅ Generated 154 embeddings (dimension: 384)
+2025-08-07 00:34:58,416 - app.document_processor - INFO - ⏱️ Embedding took 2.09s (73.6 chunks/sec)
+2025-08-07 00:34:58,422 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:34:58,423 - app.document_processor - INFO - ✅ Total processing time: 2.10s for 154 chunks
+2025-08-07 00:34:58,423 - app.document_processor - INFO - ✅ Finished processing 154 chunks
+2025-08-07 00:34:58,423 - app.vector_store - INFO - 💾 Adding 154 chunks to vector store
+2025-08-07 00:34:58,919 - app.vector_store - INFO - ✅ Successfully added 154 chunks to vector store
+2025-08-07 00:34:58,919 - app.document_processor - INFO - ⏱️ Vector storage took 0.50s
+2025-08-07 00:34:58,919 - app.document_processor - INFO - 💾 Stored 154 chunks in vector database
+2025-08-07 00:34:58,920 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 154 chunks
+2025-08-07 00:34:58,920 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:34:58,920 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:34:58,924 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:34:58,924 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:34:59,694 - app.document_processor - INFO - 📝 Extracted 6585 characters from policy_doc_3.pdf
+2025-08-07 00:34:59,694 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:34:59,694 - app.document_processor - INFO - 🔪 Smart chunking 6585 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:34:59,694 - app.document_processor - INFO - ✂️ Created 6 chunks with improved strategy
+2025-08-07 00:34:59,694 - app.document_processor - INFO - ✂️ Split into 6 chunks
+2025-08-07 00:34:59,694 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:34:59,694 - app.document_processor - INFO - 🔄 Processing 6 chunks with smaller model...
+2025-08-07 00:34:59,695 - app.document_processor - INFO - ⚡ Generating embeddings for all 6 chunks...
+2025-08-07 00:34:59,695 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 6 texts
+2025-08-07 00:34:59,823 - app.embedding_service - INFO - ✅ Generated 6 embeddings (dimension: 384)
+2025-08-07 00:34:59,823 - app.document_processor - INFO - ⏱️ Embedding took 0.13s (46.6 chunks/sec)
+2025-08-07 00:34:59,824 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:34:59,824 - app.document_processor - INFO - ✅ Total processing time: 0.13s for 6 chunks
+2025-08-07 00:34:59,824 - app.document_processor - INFO - ✅ Finished processing 6 chunks
+2025-08-07 00:34:59,824 - app.vector_store - INFO - 💾 Adding 6 chunks to vector store
+2025-08-07 00:34:59,857 - app.vector_store - INFO - ✅ Successfully added 6 chunks to vector store
+2025-08-07 00:34:59,857 - app.document_processor - INFO - ⏱️ Vector storage took 0.03s
+2025-08-07 00:34:59,857 - app.document_processor - INFO - 💾 Stored 6 chunks in vector database
+2025-08-07 00:34:59,857 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 6 chunks
+2025-08-07 00:34:59,857 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:34:59,857 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:34:59,882 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:34:59,883 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:35:01,181 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:35:02,324 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:35:03,521 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:35:04,358 - app.document_processor - INFO - 📝 Extracted 116025 characters from policy_doc_2.pdf
+2025-08-07 00:35:04,358 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:35:04,358 - app.document_processor - INFO - 🔪 Smart chunking 116025 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:35:04,360 - app.document_processor - INFO - ✂️ Created 98 chunks with improved strategy
+2025-08-07 00:35:04,360 - app.document_processor - INFO - ✂️ Split into 98 chunks
+2025-08-07 00:35:04,360 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:35:04,361 - app.document_processor - INFO - 🔄 Processing 98 chunks with smaller model...
+2025-08-07 00:35:04,361 - app.document_processor - INFO - ⚡ Generating embeddings for all 98 chunks...
+2025-08-07 00:35:04,361 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 98 texts
+2025-08-07 00:35:05,705 - app.embedding_service - INFO - ✅ Generated 98 embeddings (dimension: 384)
+2025-08-07 00:35:05,706 - app.document_processor - INFO - ⏱️ Embedding took 1.35s (72.9 chunks/sec)
+2025-08-07 00:35:05,707 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:35:05,707 - app.document_processor - INFO - ✅ Total processing time: 1.35s for 98 chunks
+2025-08-07 00:35:05,707 - app.document_processor - INFO - ✅ Finished processing 98 chunks
+2025-08-07 00:35:05,707 - app.vector_store - INFO - 💾 Adding 98 chunks to vector store
+2025-08-07 00:35:05,978 - app.vector_store - INFO - ✅ Successfully added 98 chunks to vector store
+2025-08-07 00:35:05,978 - app.document_processor - INFO - ⏱️ Vector storage took 0.27s
+2025-08-07 00:35:05,978 - app.document_processor - INFO - 💾 Stored 98 chunks in vector database
+2025-08-07 00:35:05,979 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 98 chunks
+2025-08-07 00:35:05,979 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:35:05,979 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:35:05,993 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:35:05,993 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:35:08,011 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:35:09,697 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:35:11,300 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:35:11,367 - app.document_processor - INFO - 📝 Extracted 136968 characters from policy_doc_1.pdf
+2025-08-07 00:35:11,367 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:35:11,367 - app.document_processor - INFO - 🔪 Smart chunking 136968 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:35:11,369 - app.document_processor - INFO - ✂️ Created 113 chunks with improved strategy
+2025-08-07 00:35:11,369 - app.document_processor - INFO - ✂️ Split into 113 chunks
+2025-08-07 00:35:11,369 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:35:11,369 - app.document_processor - INFO - 🔄 Processing 113 chunks with smaller model...
+2025-08-07 00:35:11,369 - app.document_processor - INFO - ⚡ Generating embeddings for all 113 chunks...
+2025-08-07 00:35:11,369 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 113 texts
+2025-08-07 00:35:12,824 - app.embedding_service - INFO - ✅ Generated 113 embeddings (dimension: 384)
+2025-08-07 00:35:12,824 - app.document_processor - INFO - ⏱️ Embedding took 1.45s (77.7 chunks/sec)
+2025-08-07 00:35:12,826 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:35:12,826 - app.document_processor - INFO - ✅ Total processing time: 1.46s for 113 chunks
+2025-08-07 00:35:12,826 - app.document_processor - INFO - ✅ Finished processing 113 chunks
+2025-08-07 00:35:12,826 - app.vector_store - INFO - 💾 Adding 113 chunks to vector store
+2025-08-07 00:35:12,970 - app.vector_store - INFO - ✅ Successfully added 113 chunks to vector store
+2025-08-07 00:35:12,970 - app.document_processor - INFO - ⏱️ Vector storage took 0.14s
+2025-08-07 00:35:12,970 - app.document_processor - INFO - 💾 Stored 113 chunks in vector database
+2025-08-07 00:35:12,970 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 113 chunks
+2025-08-07 00:35:12,970 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:35:21,327 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:35:21,328 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:35:21,973 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:35:21,973 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:35:21,973 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.389): 020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International AG and used by the Company under license Easy Health UIN: HDFHLIP23024V072223
+15 | P age
+HDFC ERGO General Insurance Company ...
+2025-08-07 00:35:21,973 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.284): 10000 The mobile app must be downloaded within 30 days of the policy risk start date to avail this benefit The average step count completed by an Insured member would be tracked on this
+mobile applica...
+2025-08-07 00:35:21,973 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.259): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:35:21,973 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:35:21,974 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:35:28,366 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:35:28,366 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1, ii. Specified disease/procedure waiting period – Code – Excl02 a)']
+2025-08-07 00:35:28,367 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:37:11,980 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:37:21,207 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:37:21,207 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:37:21,207 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:37:21,207 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:37:25,907 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:37:26,319 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:37:26,321 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:37:26,321 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:37:26,544 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:37:26,545 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:37:26,546 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:37:26,546 - app.main - INFO - 📚 Found 5 PDF files: [' policy_doc_4.pdf', 'policy_doc_5.pdf', 'policy_doc_3.pdf', 'policy_doc_2.pdf', 'policy_doc_1.pdf']
+2025-08-07 00:37:26,546 - app.main - INFO - 🔄 Processing  policy_doc_4.pdf...
+2025-08-07 00:37:26,546 - app.document_processor - INFO - 📄 Starting to process document:  policy_doc_4.pdf
+2025-08-07 00:37:26,597 - app.document_processor - INFO - 📊 Processing 101 pages
+2025-08-07 00:37:26,597 - app.document_processor - INFO - 📄 Processing page 1/101
+2025-08-07 00:37:27,921 - app.document_processor - INFO - 📄 Processing page 11/101
+2025-08-07 00:37:29,129 - app.document_processor - INFO - 📄 Processing page 21/101
+2025-08-07 00:37:30,299 - app.document_processor - INFO - 📄 Processing page 31/101
+2025-08-07 00:37:31,536 - app.document_processor - INFO - 📄 Processing page 41/101
+2025-08-07 00:37:32,779 - app.document_processor - INFO - 📄 Processing page 51/101
+2025-08-07 00:37:34,078 - app.document_processor - INFO - 📄 Processing page 61/101
+2025-08-07 00:37:35,132 - app.document_processor - INFO - 📄 Processing page 71/101
+2025-08-07 00:37:36,359 - app.document_processor - INFO - 📄 Processing page 81/101
+2025-08-07 00:37:37,287 - app.document_processor - INFO - 📄 Processing page 91/101
+2025-08-07 00:37:38,625 - app.document_processor - INFO - 📄 Processing page 101/101
+2025-08-07 00:37:38,683 - app.document_processor - INFO - 📝 Extracted 330201 characters from  policy_doc_4.pdf
+2025-08-07 00:37:38,683 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:37:38,683 - app.document_processor - INFO - 🔪 Smart chunking 330201 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:37:38,689 - app.document_processor - INFO - ✂️ Created 276 chunks with improved strategy
+2025-08-07 00:37:38,689 - app.document_processor - INFO - ✂️ Split into 276 chunks
+2025-08-07 00:37:38,689 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:37:38,689 - app.document_processor - INFO - 🔄 Processing 276 chunks with smaller model...
+2025-08-07 00:37:38,689 - app.document_processor - INFO - ⚡ Generating embeddings for all 276 chunks...
+2025-08-07 00:37:38,690 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 276 texts
+2025-08-07 00:37:42,408 - app.embedding_service - INFO - ✅ Generated 276 embeddings (dimension: 384)
+2025-08-07 00:37:42,409 - app.document_processor - INFO - ⏱️ Embedding took 3.72s (74.2 chunks/sec)
+2025-08-07 00:37:42,415 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:37:42,415 - app.document_processor - INFO - ✅ Total processing time: 3.73s for 276 chunks
+2025-08-07 00:37:42,416 - app.document_processor - INFO - ✅ Finished processing 276 chunks
+2025-08-07 00:37:42,416 - app.vector_store - INFO - 💾 Adding 276 chunks to vector store
+2025-08-07 00:37:42,900 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:37:42,900 - app.vector_store - INFO - ✅ Successfully added 276 chunks to vector store
+2025-08-07 00:37:42,900 - app.document_processor - INFO - ⏱️ Vector storage took 0.48s
+2025-08-07 00:37:42,900 - app.document_processor - INFO - 💾 Stored 276 chunks in vector database
+2025-08-07 00:37:42,902 - app.main - INFO - ✅ Processed  policy_doc_4.pdf: 276 chunks
+2025-08-07 00:37:42,903 - app.main - INFO - 🔄 Processing policy_doc_5.pdf...
+2025-08-07 00:37:42,903 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_5.pdf
+2025-08-07 00:37:42,932 - app.document_processor - INFO - 📊 Processing 49 pages
+2025-08-07 00:37:42,932 - app.document_processor - INFO - 📄 Processing page 1/49
+2025-08-07 00:37:44,150 - app.document_processor - INFO - 📄 Processing page 11/49
+2025-08-07 00:37:46,252 - app.document_processor - INFO - 📄 Processing page 21/49
+2025-08-07 00:37:47,726 - app.document_processor - INFO - 📄 Processing page 31/49
+2025-08-07 00:37:49,254 - app.document_processor - INFO - 📄 Processing page 41/49
+2025-08-07 00:37:50,294 - app.document_processor - INFO - 📝 Extracted 190917 characters from policy_doc_5.pdf
+2025-08-07 00:37:50,295 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:37:50,295 - app.document_processor - INFO - 🔪 Smart chunking 190917 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:37:50,298 - app.document_processor - INFO - ✂️ Created 154 chunks with improved strategy
+2025-08-07 00:37:50,298 - app.document_processor - INFO - ✂️ Split into 154 chunks
+2025-08-07 00:37:50,298 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:37:50,298 - app.document_processor - INFO - 🔄 Processing 154 chunks with smaller model...
+2025-08-07 00:37:50,298 - app.document_processor - INFO - ⚡ Generating embeddings for all 154 chunks...
+2025-08-07 00:37:50,298 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 154 texts
+2025-08-07 00:37:52,314 - app.embedding_service - INFO - ✅ Generated 154 embeddings (dimension: 384)
+2025-08-07 00:37:52,323 - app.document_processor - INFO - ⏱️ Embedding took 2.03s (76.0 chunks/sec)
+2025-08-07 00:37:52,329 - app.document_processor - INFO - ⏱️ Chunk creation took 0.01s
+2025-08-07 00:37:52,330 - app.document_processor - INFO - ✅ Total processing time: 2.03s for 154 chunks
+2025-08-07 00:37:52,330 - app.document_processor - INFO - ✅ Finished processing 154 chunks
+2025-08-07 00:37:52,330 - app.vector_store - INFO - 💾 Adding 154 chunks to vector store
+2025-08-07 00:37:52,560 - app.vector_store - INFO - ✅ Successfully added 154 chunks to vector store
+2025-08-07 00:37:52,560 - app.document_processor - INFO - ⏱️ Vector storage took 0.23s
+2025-08-07 00:37:52,560 - app.document_processor - INFO - 💾 Stored 154 chunks in vector database
+2025-08-07 00:37:52,561 - app.main - INFO - ✅ Processed policy_doc_5.pdf: 154 chunks
+2025-08-07 00:37:52,561 - app.main - INFO - 🔄 Processing policy_doc_3.pdf...
+2025-08-07 00:37:52,561 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_3.pdf
+2025-08-07 00:37:52,565 - app.document_processor - INFO - 📊 Processing 2 pages
+2025-08-07 00:37:52,565 - app.document_processor - INFO - 📄 Processing page 1/2
+2025-08-07 00:37:53,337 - app.document_processor - INFO - 📝 Extracted 6585 characters from policy_doc_3.pdf
+2025-08-07 00:37:53,337 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:37:53,337 - app.document_processor - INFO - 🔪 Smart chunking 6585 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:37:53,337 - app.document_processor - INFO - ✂️ Created 6 chunks with improved strategy
+2025-08-07 00:37:53,337 - app.document_processor - INFO - ✂️ Split into 6 chunks
+2025-08-07 00:37:53,337 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:37:53,337 - app.document_processor - INFO - 🔄 Processing 6 chunks with smaller model...
+2025-08-07 00:37:53,337 - app.document_processor - INFO - ⚡ Generating embeddings for all 6 chunks...
+2025-08-07 00:37:53,337 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 6 texts
+2025-08-07 00:37:53,467 - app.embedding_service - INFO - ✅ Generated 6 embeddings (dimension: 384)
+2025-08-07 00:37:53,467 - app.document_processor - INFO - ⏱️ Embedding took 0.13s (46.2 chunks/sec)
+2025-08-07 00:37:53,467 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:37:53,467 - app.document_processor - INFO - ✅ Total processing time: 0.13s for 6 chunks
+2025-08-07 00:37:53,467 - app.document_processor - INFO - ✅ Finished processing 6 chunks
+2025-08-07 00:37:53,467 - app.vector_store - INFO - 💾 Adding 6 chunks to vector store
+2025-08-07 00:37:53,479 - app.vector_store - INFO - ✅ Successfully added 6 chunks to vector store
+2025-08-07 00:37:53,479 - app.document_processor - INFO - ⏱️ Vector storage took 0.01s
+2025-08-07 00:37:53,479 - app.document_processor - INFO - 💾 Stored 6 chunks in vector database
+2025-08-07 00:37:53,479 - app.main - INFO - ✅ Processed policy_doc_3.pdf: 6 chunks
+2025-08-07 00:37:53,479 - app.main - INFO - 🔄 Processing policy_doc_2.pdf...
+2025-08-07 00:37:53,479 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_2.pdf
+2025-08-07 00:37:53,504 - app.document_processor - INFO - 📊 Processing 39 pages
+2025-08-07 00:37:53,505 - app.document_processor - INFO - 📄 Processing page 1/39
+2025-08-07 00:37:54,768 - app.document_processor - INFO - 📄 Processing page 11/39
+2025-08-07 00:37:55,948 - app.document_processor - INFO - 📄 Processing page 21/39
+2025-08-07 00:37:57,188 - app.document_processor - INFO - 📄 Processing page 31/39
+2025-08-07 00:37:58,065 - app.document_processor - INFO - 📝 Extracted 116025 characters from policy_doc_2.pdf
+2025-08-07 00:37:58,065 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:37:58,065 - app.document_processor - INFO - 🔪 Smart chunking 116025 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:37:58,067 - app.document_processor - INFO - ✂️ Created 98 chunks with improved strategy
+2025-08-07 00:37:58,067 - app.document_processor - INFO - ✂️ Split into 98 chunks
+2025-08-07 00:37:58,067 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:37:58,067 - app.document_processor - INFO - 🔄 Processing 98 chunks with smaller model...
+2025-08-07 00:37:58,067 - app.document_processor - INFO - ⚡ Generating embeddings for all 98 chunks...
+2025-08-07 00:37:58,067 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 98 texts
+2025-08-07 00:37:59,354 - app.embedding_service - INFO - ✅ Generated 98 embeddings (dimension: 384)
+2025-08-07 00:37:59,354 - app.document_processor - INFO - ⏱️ Embedding took 1.29s (76.1 chunks/sec)
+2025-08-07 00:37:59,356 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:37:59,356 - app.document_processor - INFO - ✅ Total processing time: 1.29s for 98 chunks
+2025-08-07 00:37:59,356 - app.document_processor - INFO - ✅ Finished processing 98 chunks
+2025-08-07 00:37:59,356 - app.vector_store - INFO - 💾 Adding 98 chunks to vector store
+2025-08-07 00:37:59,639 - app.vector_store - INFO - ✅ Successfully added 98 chunks to vector store
+2025-08-07 00:37:59,639 - app.document_processor - INFO - ⏱️ Vector storage took 0.28s
+2025-08-07 00:37:59,639 - app.document_processor - INFO - 💾 Stored 98 chunks in vector database
+2025-08-07 00:37:59,640 - app.main - INFO - ✅ Processed policy_doc_2.pdf: 98 chunks
+2025-08-07 00:37:59,640 - app.main - INFO - 🔄 Processing policy_doc_1.pdf...
+2025-08-07 00:37:59,640 - app.document_processor - INFO - 📄 Starting to process document: policy_doc_1.pdf
+2025-08-07 00:37:59,654 - app.document_processor - INFO - 📊 Processing 31 pages
+2025-08-07 00:37:59,654 - app.document_processor - INFO - 📄 Processing page 1/31
+2025-08-07 00:38:01,637 - app.document_processor - INFO - 📄 Processing page 11/31
+2025-08-07 00:38:03,361 - app.document_processor - INFO - 📄 Processing page 21/31
+2025-08-07 00:38:04,971 - app.document_processor - INFO - 📄 Processing page 31/31
+2025-08-07 00:38:05,039 - app.document_processor - INFO - 📝 Extracted 136968 characters from policy_doc_1.pdf
+2025-08-07 00:38:05,039 - app.document_processor - INFO - 🔪 Starting to split text into chunks...
+2025-08-07 00:38:05,039 - app.document_processor - INFO - 🔪 Smart chunking 136968 characters (chunk_size: 1500, overlap: 300)
+2025-08-07 00:38:05,041 - app.document_processor - INFO - ✂️ Created 113 chunks with improved strategy
+2025-08-07 00:38:05,041 - app.document_processor - INFO - ✂️ Split into 113 chunks
+2025-08-07 00:38:05,041 - app.document_processor - INFO - 🚀 Starting chunk processing...
+2025-08-07 00:38:05,041 - app.document_processor - INFO - 🔄 Processing 113 chunks with smaller model...
+2025-08-07 00:38:05,041 - app.document_processor - INFO - ⚡ Generating embeddings for all 113 chunks...
+2025-08-07 00:38:05,041 - app.embedding_service - INFO - 🔄 Generating batch embeddings for 113 texts
+2025-08-07 00:38:06,527 - app.embedding_service - INFO - ✅ Generated 113 embeddings (dimension: 384)
+2025-08-07 00:38:06,528 - app.document_processor - INFO - ⏱️ Embedding took 1.49s (76.0 chunks/sec)
+2025-08-07 00:38:06,532 - app.document_processor - INFO - ⏱️ Chunk creation took 0.00s
+2025-08-07 00:38:06,532 - app.document_processor - INFO - ✅ Total processing time: 1.49s for 113 chunks
+2025-08-07 00:38:06,533 - app.document_processor - INFO - ✅ Finished processing 113 chunks
+2025-08-07 00:38:06,538 - app.vector_store - INFO - 💾 Adding 113 chunks to vector store
+2025-08-07 00:38:06,745 - app.vector_store - INFO - ✅ Successfully added 113 chunks to vector store
+2025-08-07 00:38:06,746 - app.document_processor - INFO - ⏱️ Vector storage took 0.21s
+2025-08-07 00:38:06,746 - app.document_processor - INFO - 💾 Stored 113 chunks in vector database
+2025-08-07 00:38:06,746 - app.main - INFO - ✅ Processed policy_doc_1.pdf: 113 chunks
+2025-08-07 00:38:06,746 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:38:17,009 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:38:17,009 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:38:17,499 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:38:17,499 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:38:17,499 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.389): 020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International AG and used by the Company under license Easy Health UIN: HDFHLIP23024V072223
+15 | P age
+HDFC ERGO General Insurance Company ...
+2025-08-07 00:38:17,499 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.389): 020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International AG and used by the Company under license Easy Health UIN: HDFHLIP23024V072223
+15 | P age
+HDFC ERGO General Insurance Company ...
+2025-08-07 00:38:17,499 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.284): 10000 The mobile app must be downloaded within 30 days of the policy risk start date to avail this benefit The average step count completed by an Insured member would be tracked on this
+mobile applica...
+2025-08-07 00:38:17,499 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:38:17,499 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:38:21,818 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.9
+2025-08-07 00:38:21,819 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1, Section i.a)', 'Document 1, Section ii.a)']
+2025-08-07 00:38:21,819 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:39:53,407 - app.main - INFO - 🔍 Processing query: I need to change my gender. Are treatments for this covered under the Bajaj Allianz Global Health Care policy?
+2025-08-07 00:39:53,412 - app.query_processor - INFO - 🔍 Processing query: I need to change my gender. Are treatments for this covered under the Bajaj Allianz Global Health Care policy?
+2025-08-07 00:39:54,080 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:39:54,080 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.161): failure of less invasive methods of weight loss: f. Obesity-related cardiomyopathy g. Coronary heart disease h. Severe Sleep Apnea i Uncontrolled Type2 Diabetes
+7) Change-of-gender treatments (Code-Ex...
+2025-08-07 00:39:54,080 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.161): failure of less invasive methods of weight loss: f. Obesity-related cardiomyopathy g. Coronary heart disease h. Severe Sleep Apnea i Uncontrolled Type2 Diabetes
+7) Change-of-gender treatments (Code-Ex...
+2025-08-07 00:39:54,080 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.146): You received treatment for, the date of onset of symptoms, the nature of the treatment and the fees charged.) 3 Claim back Your eligible costs via Our MyHealth app or online portal (www.allianzcare.co...
+2025-08-07 00:39:54,081 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:39:54,081 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:39:56,340 - app.query_processor - INFO - ✅ Decision: Rejected, Confidence: 0.9
+2025-08-07 00:39:56,340 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1 and 2, Exclusion 7) Change-of-gender treatments (Code-Excl07)']
+2025-08-07 00:39:56,340 - app.main - INFO - ✅ Query processed successfully. Decision: Rejected
+2025-08-07 00:47:58,851 - app.main - INFO - 🔍 Processing query: pre-existing disease (PED) and its direct complications shall be excluded for ?
+2025-08-07 00:47:58,856 - app.query_processor - INFO - 🔍 Processing query: pre-existing disease (PED) and its direct complications shall be excluded for ?
+2025-08-07 00:47:59,661 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:47:59,661 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.171): stone. Rectocele  Benign Hyperplasia of prostate  Cataract f. Eye  NIL  Surgery of varicose veins and g Others  NIL
+varicose ulcers
+General
+( Applicable to all
+organ  Internal tumours,
+h. system...
+2025-08-07 00:47:59,661 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.171): stone. Rectocele  Benign Hyperplasia of prostate  Cataract f. Eye  NIL  Surgery of varicose veins and g Others  NIL
+varicose ulcers
+General
+( Applicable to all
+organ  Internal tumours,
+h. system...
+2025-08-07 00:47:59,661 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.170): APPLICABLE TO PART A- DOMESTIC COVER UNDER SECTION C) BENEFITS COVERED UNDER THE POLICY 1) Pre-Existing Diseases (Code -Excl01) a Expenses related to the treatment of a Pre-Existing Disease (PED) and ...
+2025-08-07 00:47:59,661 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:47:59,662 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:48:04,889 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:48:04,889 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1 (Similarity: 0.17, Source: policy_doc_2.pdf): iii. Pre-Existing Diseases – Code – Excl01 a)', 'Document 2 (Similarity: 0.17, Source: policy_doc_2.pdf): iii. Pre-Existing Diseases – Code – Excl01 a)', 'Document 3 (Similarity: 0.17, Source: policy_doc_5.pdf): 1) Pre-Existing Diseases (Code -Excl01) a']
+2025-08-07 00:48:04,889 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:48:52,864 - app.main - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:48:52,865 - app.query_processor - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:48:53,355 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:48:53,355 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:48:53,355 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:48:53,355 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.060): increased at the time of Renewal the Cumulative Bonus shall be calculated on the Annual Sum Insured of the iii In a floater policy as specified in the Policy Schedule,
+last completed Policy Year.
+the ...
+2025-08-07 00:48:53,355 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:48:53,356 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:48:56,294 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:48:56,294 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1: Cumulative Bonus Clause', 'Document 2: Cumulative Bonus Clause', 'Document 11', 'Document 12']
+2025-08-07 00:48:56,294 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:49:19,554 - app.main - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:49:19,555 - app.query_processor - INFO - 🔍 Processing query: What is the waiting period for pre-existing diseases under the HDFC ERGO Easy Health policy?
+2025-08-07 00:49:20,363 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:49:20,364 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.389): 020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International AG and used by the Company under license Easy Health UIN: HDFHLIP23024V072223
+15 | P age
+HDFC ERGO General Insurance Company ...
+2025-08-07 00:49:20,364 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.389): 020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International AG and used by the Company under license Easy Health UIN: HDFHLIP23024V072223
+15 | P age
+HDFC ERGO General Insurance Company ...
+2025-08-07 00:49:20,364 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.284): 10000 The mobile app must be downloaded within 30 days of the policy risk start date to avail this benefit The average step count completed by an Insured member would be tracked on this
+mobile applica...
+2025-08-07 00:49:20,365 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:49:20,365 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:49:23,455 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.9
+2025-08-07 00:49:23,456 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1: ii. Specified disease/procedure waiting period – Code – Excl02 a)', 'Document 2: ii. Specified disease/procedure waiting period – Code – Excl02 a)']
+2025-08-07 00:49:23,456 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 00:49:30,849 - app.main - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:49:30,849 - app.query_processor - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:49:32,142 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:49:32,143 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:49:32,143 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:49:32,143 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.060): increased at the time of Renewal the Cumulative Bonus shall be calculated on the Annual Sum Insured of the iii In a floater policy as specified in the Policy Schedule,
+last completed Policy Year.
+the ...
+2025-08-07 00:49:32,143 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:49:32,143 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:49:34,972 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:49:34,973 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1: Cumulative Bonus section', 'Document 11: Cumulative Bonus section']
+2025-08-07 00:49:34,973 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:55:14,349 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 00:55:24,964 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 00:55:24,964 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 00:55:24,964 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:55:24,964 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 00:55:29,094 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 00:55:29,520 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 00:55:29,522 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 00:55:29,522 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 00:55:29,733 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:55:29,734 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:55:29,735 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 00:55:29,773 - app.main - INFO - 📚 Found 1844 existing documents in vector store - skipping processing
+2025-08-07 00:55:29,774 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 00:55:58,983 - app.main - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:55:58,984 - app.query_processor - INFO - 🔍 Processing query: What is the maximum cumulative bonus I can get with the ICICI Lombard Golden Shield policy?
+2025-08-07 00:55:59,875 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 00:55:59,875 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:55:59,876 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:55:59,876 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.149): Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring 11 Air Ambulance
+Policy has been claim free and is continuously renewed
+We will cover the expenses up t...
+2025-08-07 00:55:59,876 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.060): increased at the time of Renewal the Cumulative Bonus shall be calculated on the Annual Sum Insured of the iii In a floater policy as specified in the Policy Schedule,
+last completed Policy Year.
+the ...
+2025-08-07 00:55:59,876 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 00:55:59,876 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 00:56:04,249 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:56:04,250 - app.query_processor - INFO - 📄 Referenced sources: ['Cumulative Bonus of 10% of the Annual Sum insured at the end of each Policy Year if the expiring Policy has been claim free and is continuously renewed with Us. The Cumulative Bonus will not be accumulated for more than 100% of the Annual Sum insured under any circumstances.']
+2025-08-07 00:56:04,250 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:56:36,826 - app.main - INFO - 🔍 Processing query: How do I file a cashless claim with HDFC ERGO?
+2025-08-07 00:56:36,827 - app.query_processor - INFO - 🔍 Processing query: How do I file a cashless claim with HDFC ERGO?
+2025-08-07 00:56:37,636 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 00:56:37,636 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.524): on Our prior Within 7 days of the Insured Person’s discharge acceptance of a claim under Section B-1)a): post-hospitalisation. e Cashless Service:
+Treatment, Consultation Treatment, Cashless Service W...
+2025-08-07 00:56:37,636 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.524): on Our prior Within 7 days of the Insured Person’s discharge acceptance of a claim under Section B-1)a): post-hospitalisation. e Cashless Service:
+Treatment, Consultation Treatment, Cashless Service W...
+2025-08-07 00:56:37,636 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.488): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 00:56:37,636 - app.query_processor - INFO - 📄 Filtered to 12 docs with similarity > 0.4
+2025-08-07 00:56:41,829 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 00:56:41,830 - app.query_processor - INFO - 📄 Referenced sources: ['Document 2: Page 27', 'Document 3: Clause viii, Page 21', 'Document 8: Table 1, Page 28']
+2025-08-07 00:56:41,830 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 00:57:22,499 - app.main - INFO - 🛑 Shutting down system...

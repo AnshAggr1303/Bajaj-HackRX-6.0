@@ -6,15 +6,12 @@ from typing import Dict, Any, List
 import json
 import re
 from dotenv import load_dotenv
+from .models import QueryResponse
 
-# Load .env file first - before trying to access environment variables
+# Load environment variables
 load_dotenv()
 
-# Debug: Check environment variables before configuring
-print("🔍 DEBUG in query_processor.py:")
-print(f"🔑 GOOGLE_API_KEY available: {'✅ Yes' if os.getenv('GOOGLE_API_KEY') else '❌ No'}")
-
-# Try multiple ways to get the API key
+# Configure API
 api_key = None
 possible_keys = ['GOOGLE_API_KEY', 'GEMINI_API_KEY', 'GOOGLE_AI_KEY']
 
@@ -22,16 +19,7 @@ for key_name in possible_keys:
     api_key = os.getenv(key_name)
     if api_key:
         print(f"✅ Found API key in environment variable: {key_name}")
-        print(f"🔑 API Key starts with: {api_key[:15]}...")
         break
-    else:
-        print(f"❌ No API key found in: {key_name}")
-
-if not api_key:
-    print("⚠️ No API key found in environment variables!")
-    print("🔍 All environment variables:", list(os.environ.keys()))
-    # Fallback - you can temporarily uncomment this line with your actual key
-    # api_key = "AIzaSyChD-04w-gRQ9eWvRZiCxuzW4I8acqnTAY"  # Your actual key
 
 if api_key:
     try:
@@ -58,19 +46,32 @@ class QueryProcessor:
             # Generate query embedding
             query_embedding = await self.embedding_service.generate_query_embedding(query)
             
-            # Search for MORE relevant documents (increased from 5 to 12)
+            # Search for relevant documents
             relevant_docs = await self.vector_store.search_similar(
                 query_embedding, 
-                top_k=12  # More context for better decisions
-            )
+                top_k=15)
             
             logger.info(f"📄 Found {len(relevant_docs)} relevant documents")
+
+            # Debug: Log first few retrieved documents
+            for i, doc in enumerate(relevant_docs[:3]):
+                logger.info(f"📄 Doc {i+1} (similarity: {doc.get('similarity', 0):.3f}): {doc.get('text', '')[:200]}...")
             
-            # Generate decision using LLM
-            decision_result = await self._generate_decision(query, relevant_docs)
+            # Filter out very low similarity results
+            filtered_docs = [doc for doc in relevant_docs if doc.get('similarity', 0) > 0.4]
+            logger.info(f"📄 Filtered to {len(filtered_docs)} docs with similarity > 0.4")
             
-            logger.info(f"✅ Generated decision: {decision_result['decision']}")
-            return decision_result
+            if not filtered_docs:
+                logger.warning("⚠️ No high-similarity documents found, using all results")
+                filtered_docs = relevant_docs
+
+            # Use filtered_docs instead of relevant_docs for context
+            result = await self._generate_decision(query, filtered_docs)
+            
+            clean_result = self._create_clean_response(result)
+            logger.info(f"✅ Decision: {result['decision']}, Confidence: {result.get('confidence_score', 0)}")
+            logger.info(f"📄 Referenced sources: {result.get('referenced_clauses', [])}")
+            return clean_result
             
         except Exception as e:
             logger.error(f"❌ Query processing failed: {str(e)}")
@@ -101,6 +102,10 @@ class QueryProcessor:
             # Generate response using Gemini
             model = genai.GenerativeModel(self.model_name)
             response = model.generate_content(prompt)
+
+            # Add debug prints for the raw Gemini response and the context
+            print(f"🔍 Raw Gemini response: {response.text}")
+            print(f"📄 Context sent to Gemini (first 500 chars): {context[:500]}")
             
             print("✅ Successfully received response from Gemini")
             
@@ -136,45 +141,20 @@ class QueryProcessor:
         return "\n".join(context_parts)
 
     def _create_decision_prompt(self, query: str, context: str) -> str:
-        """Create LESS CONSERVATIVE decision prompt for the LLM"""
-        return f"""
-You are an expert insurance claim processor. Analyze the following insurance claim and make a practical decision based on the provided policy documents.
-
-CLAIM QUERY: {query}
-
-RELEVANT POLICY DOCUMENTS:
+        return f"""Answer this insurance query using the provided policy documents.
+QUERY: {query}
+POLICY DOCUMENTS:
 {context}
-
-IMPORTANT INSTRUCTIONS:
-- Make decisions based on the available information in the documents
-- If coverage is mentioned for the type of treatment, assume it's COVERED unless explicitly excluded
-- For waiting periods: If not specifically mentioned for the condition, assume standard waiting periods apply
-- For amounts: If no specific sub-limits are mentioned, assume treatment is covered up to policy limits
-- Only mark as "Undecided" if there are clear contradictions or major missing information
-
-Your task is to:
-1. Decide whether to APPROVE, REJECT, or mark as UNDECIDED (prefer approval if coverage exists)
-2. If approved, provide a reasonable estimate based on typical costs (mention this is an estimate)
-3. Provide clear justification referencing specific policy sections
-4. List the referenced clauses
-5. Provide a confidence score (0.0 to 1.0)
-
-Please respond in the following JSON format:
+Provide a direct, specific answer to the question asked.Respond in JSON format:
 {{
     "decision": "Approved/Rejected/Undecided",
-    "amount": null or estimated_amount_in_INR,
-    "justification": "Clear explanation with policy references and reasoning",
-    "referenced_clauses": ["clause 1", "clause 2"],
-    "confidence_score": 0.0_to_1.0
+    "amount": null,
+    "justification": "Direct answer with specific details from documents",
+    "referenced_clauses": ["relevant sections"],
+    "confidence_score": 0.9
 }}
-
-Decision Logic:
-- APPROVE: If treatment type is covered and no explicit exclusions apply
-- REJECT: If explicitly excluded or contraindicated
-- UNDECIDED: Only if major policy information is missing or contradictory
-
-Be practical and helpful - insurance should cover legitimate medical needs unless clearly excluded.
-"""
+For waiting period questions, include the exact time period.
+Never use 'undefined' - always provide the specific answer found in documents."""
 
     def _parse_llm_response(self, response_text: str, relevant_docs: List[Dict]) -> Dict[str, Any]:
         """Parse LLM response into structured format"""
@@ -184,6 +164,7 @@ Be practical and helpful - insurance should cover legitimate medical needs unles
             
             if json_match:
                 json_str = json_match.group()
+                print(f"🔍 Extracted JSON string: {json_str}")
                 result = json.loads(json_str)
                 
                 # Validate and clean the result
@@ -230,7 +211,7 @@ Be practical and helpful - insurance should cover legitimate medical needs unles
         return {
             "decision": decision,
             "amount": None,
-            "justification": response_text[:500] + "..." if len(response_text) > 500 else response_text,
+            "justification": f"FALLBACK PARSING - Raw response: {response_text[:300]}...",
             "referenced_clauses": [],
             "confidence_score": 0.3,
             "additional_info": {
@@ -239,4 +220,19 @@ Be practical and helpful - insurance should cover legitimate medical needs unles
                 "sources": list(set([doc.get('metadata', {}).get('source', 'Unknown') 
                                for doc in relevant_docs]))
             }
+        }
+
+    def _create_clean_response(self, llm_result: Dict) -> Dict:
+        """Return clean response without extra formatting"""
+        justification = llm_result.get("justification", "No response available")
+        
+        response = justification if justification != "undefined" else "LLM returned undefined"
+        
+        return {
+            "response": response,
+            "decision": llm_result.get("decision", "Undecided"),
+            "amount": llm_result.get("amount"),
+            "confidence": llm_result.get("confidence_score", 0.0),
+            "justification": justification,
+            "referenced_clauses": llm_result.get("referenced_clauses", [])
         }

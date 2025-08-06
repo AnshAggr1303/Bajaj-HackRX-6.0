@@ -5,12 +5,12 @@ class QueryRequest(BaseModel):
     query: str
 
 class QueryResponse(BaseModel):
-    decision: str  # "Approved", "Rejected", "Undecided"
-    amount: Optional[float] = None
-    justification: str
-    referenced_clauses: List[str]
-    confidence_score: Optional[float] = None
-    additional_info: Optional[dict] = None
+    response: str
+    decision: str
+    amount: Optional[str] = None  # Changed from float to str
+    confidence: Optional[float] = None
+    justification: Optional[str] = None
+    referenced_clauses: Optional[List[str]] = None
 
 class DocumentChunk(BaseModel):
     id: str

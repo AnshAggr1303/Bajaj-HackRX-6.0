@@ -59,7 +59,7 @@ class EmbeddingService:
             logger.error(f"❌ Failed to generate query embedding: {str(e)}")
             raise
 
-    def generate_batch_embeddings(self, texts: List[str]) -> List[List[float]]:
+    async def generate_batch_embeddings(self, texts: List[str]) -> List[List[float]]:
         """Generate embeddings for multiple texts at once (for faster processing)"""
         try:
             logger.info(f"🔄 Generating batch embeddings for {len(texts)} texts")

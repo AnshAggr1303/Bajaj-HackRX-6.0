@@ -98,7 +98,7 @@ class DocumentProcessor:
             logger.info(f"⚡ Generating embeddings for all {len(chunks)} chunks...")
             
             # Use the sync batch method (it's faster than individual async calls)
-            embeddings = self.embedding_service.generate_batch_embeddings(chunks)
+            embeddings = await self.embedding_service.generate_batch_embeddings(chunks)
             
             embedding_time = time.time() - embedding_start
             logger.info(f"⏱️ Embedding took {embedding_time:.2f}s ({len(chunks)/embedding_time:.1f} chunks/sec)")

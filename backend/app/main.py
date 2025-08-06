@@ -93,19 +93,25 @@ async def lifespan(app: FastAPI):
 async def initialize_documents():
     """Process and store documents on startup"""
     documents_dir = "documents"
-    
+
     if not os.path.exists(documents_dir):
         logger.warning(f"📁 Documents directory not found: {documents_dir}")
         return
-    
+
+    # Check if any documents are already processed
+    doc_count = await vector_store.get_document_count()
+    if doc_count > 0:
+        logger.info(f"📚 Found {doc_count} existing documents in vector store - skipping processing")
+        return
+
     pdf_files = [f for f in os.listdir(documents_dir) if f.endswith('.pdf')]
-    
+
     if not pdf_files:
         logger.warning("📄 No PDF files found in documents directory")
         return
-    
+
     logger.info(f"📚 Found {len(pdf_files)} PDF files: {pdf_files}")
-    
+
     for pdf_file in pdf_files:
         try:
             file_path = os.path.join(documents_dir, pdf_file)
@@ -113,7 +119,6 @@ async def initialize_documents():
             
             result = await document_processor.process_document(file_path, pdf_file)
             logger.info(f"✅ Processed {pdf_file}: {result['chunks_processed']} chunks")
-            
         except Exception as e:
             logger.error(f"❌ Failed to process {pdf_file}: {str(e)}")
 
@@ -177,7 +182,7 @@ async def process_query(request: QueryRequest):
         result = await query_processor.process_query(request.query)
         
         logger.info(f"✅ Query processed successfully. Decision: {result['decision']}")
-        return QueryResponse(**result)
+        return result
         
     except Exception as e:
         logger.error(f"❌ Query processing failed: {str(e)}")
