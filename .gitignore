@@ -45,4 +45,5 @@ __pycache__/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+.pnpm-debug.log*backend/venv311/
+frontend/node_modules/
