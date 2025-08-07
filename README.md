@@ -20,7 +20,7 @@ cd Bajaj-HackRX-6.0
 
 2. **Create and activate a Python 3.11 virtual environment:**
    ```bash
-   python3.11 -m venv hackrx_env
+   python3 -m venv hackrx_env
    source hackrx_env/bin/activate  # On Windows: hackrx_env\Scripts\activate
    ```
 
@@ -32,7 +32,7 @@ cd Bajaj-HackRX-6.0
 4. **Create a `.env` file in the `backend/` folder with the following content:**
    ```env
    GEMINI_API_KEY=your_api_key
-   API_TOKEN=de76f5235c90aed44bb592ab29e6649d9bb023277d2a45b20640fdcf40031d91
+   API_TOKEN=your_token
    LOG_LEVEL=INFO
    ```
 
