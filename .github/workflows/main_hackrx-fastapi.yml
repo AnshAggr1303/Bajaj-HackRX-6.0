@@ -27,10 +27,9 @@ jobs:
       # Navigate to the backend directory before installing dependencies
       - name: Install dependencies
         run: |
-          cd backend
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
+          python -m venv hackrx_env
+          source hackrx_env/bin/activate
+          pip install -r backend/requirements.txt
       
       # Upload the backend directory for deployment
       - name: Upload artifact for deployment jobs
@@ -67,3 +66,4 @@ jobs:
           slot-name: 'Production'
           # The package path is the directory where the code is located after downloading the artifact
           package: .
+
