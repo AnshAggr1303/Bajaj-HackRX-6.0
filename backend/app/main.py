@@ -1,53 +1,30 @@
 import logging
 import os
+import shutil
+import time
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException, Security, Depends
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
-import uvicorn
 
-from .models import QueryRequest, QueryResponse
+# Import models and services
+from .models import (
+    HackRXRequest,
+    HackRXResponse,
+    # Keep original models if other endpoints use them
+)
 from .document_processor import DocumentProcessor
 from .query_processor import QueryProcessor
-from .vector_store import VectorStore
 from .embedding_service import EmbeddingService
+from .in_memory_vector_store import InMemoryVectorStore
 
-# Debug: Print current working directory and file locations
-print(f"🔍 Current working directory: {os.getcwd()}")
-print(f"🔍 main.py location: {__file__}")
 
-# Try loading .env from multiple locations
-env_paths = [
-    ".env",              # Same directory as main.py
-    "../.env",           # Parent directory
-    os.path.join(os.path.dirname(__file__), ".env"),  # Absolute path same dir
-]
+# --- Load Environment Variables ---
+load_dotenv()
 
-env_loaded = False
-for env_path in env_paths:
-    full_path = os.path.abspath(env_path)
-    print(f"🔍 Checking .env at: {full_path}")
-    if os.path.exists(env_path):
-        print(f"✅ Found .env file at: {env_path}")
-        load_dotenv(env_path)
-        env_loaded = True
-        break
-    else:
-        print(f"❌ No .env file found at: {env_path}")
-
-if not env_loaded:
-    print("⚠️ No .env file found, trying default load_dotenv()")
-    load_dotenv()
-
-# Debug: Check what environment variables are loaded
-print(f"🔑 GOOGLE_API_KEY loaded: {'✅ Yes' if os.getenv('GOOGLE_API_KEY') else '❌ No'}")
-if os.getenv('GOOGLE_API_KEY'):
-    print(f"🔑 API Key starts with: {os.getenv('GOOGLE_API_KEY')[:10]}...")
-else:
-    print("🔑 Available env vars starting with 'G':", [k for k in os.environ.keys() if k.startswith('G')])
-
-# Setup logging
+# --- Setup Logging ---
+os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     level=getattr(logging, os.getenv("LOG_LEVEL", "INFO")),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -58,182 +35,152 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Global variables for services
-vector_store = None
-embedding_service = None
-document_processor = None
-query_processor = None
+# --- Security Setup ---
+security = HTTPBearer()
 
+def verify_token(credentials: HTTPAuthorizationCredentials = Security(security)):
+    """Verify Bearer token for authentication"""
+    expected_token = os.getenv("API_TOKEN", "de76f5235c90aed44bb592ab29e6649d9bb023277d2a45b20640fdcf40031d91")
+    if credentials.credentials != expected_token:
+        logger.warning(f"❌ Invalid token attempt: {credentials.credentials[:10]}...")
+        raise HTTPException(status_code=401, detail="Invalid authentication token")
+    logger.info("✅ Token validated successfully")
+    return credentials
+
+# --- Global Services ---
+embedding_service: EmbeddingService
+document_processor: DocumentProcessor
+query_processor: QueryProcessor
+vector_store: InMemoryVectorStore
+
+# --- Application Lifespan (Startup/Shutdown) ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Initialize services on startup"""
-    global vector_store, embedding_service, document_processor, query_processor
-    
+    """Initializes the system on startup and handles shutdown."""
+    global embedding_service, document_processor, query_processor, vector_store
+
+    # --- ADDED: Diagnostic check for the API Key ---
+    logger.info("--- CHECKING ENVIRONMENT VARIABLES ---")
+    api_key_value = os.getenv("GEMINI_API_KEY")
+    token_value = os.getenv("API_TOKEN")
+    if api_key_value:
+        logger.info("✅ SUCCESS: GEMINI_API_KEY was found!")
+    else:
+        logger.error("❌ FAILURE: GEMINI_API_KEY is NOT set. Check your .env file's name, location, and content.")
+    if token_value:
+        logger.info("✅ SUCCESS: API_TOKEN was found!")
+    else:
+        logger.info("⚠️ WARNING: API_TOKEN not set, using default token")
+    logger.info("------------------------------------")
+    # --- END of Diagnostic check ---
+
     try:
-        logger.info("🚀 Starting Insurance Claim System...")
-        
-        # Initialize services
+        logger.info("🚀 Initializing HackRX System...")
+
         embedding_service = EmbeddingService()
-        vector_store = VectorStore()
+        vector_store = InMemoryVectorStore()  # Use in-memory store
         document_processor = DocumentProcessor(embedding_service, vector_store)
         query_processor = QueryProcessor(embedding_service, vector_store)
-        
-        # Process documents on startup
-        await initialize_documents()
-        
-        logger.info("✅ System initialized successfully!")
+
+        logger.info("✅ HackRX System initialized successfully!")
         yield
-        
+
     except Exception as e:
         logger.error(f"❌ Failed to initialize system: {str(e)}")
         raise
     finally:
-        logger.info("🛑 Shutting down system...")
+        logger.info("🛑 Shutting down HackRX system...")
 
-async def initialize_documents():
-    """Process and store documents on startup"""
-    documents_dir = "documents"
-
-    if not os.path.exists(documents_dir):
-        logger.warning(f"📁 Documents directory not found: {documents_dir}")
-        return
-
-    # Check if any documents are already processed
-    doc_count = await vector_store.get_document_count()
-    if doc_count > 0:
-        logger.info(f"📚 Found {doc_count} existing documents in vector store - skipping processing")
-        return
-
-    pdf_files = [f for f in os.listdir(documents_dir) if f.endswith('.pdf')]
-
-    if not pdf_files:
-        logger.warning("📄 No PDF files found in documents directory")
-        return
-
-    logger.info(f"📚 Found {len(pdf_files)} PDF files: {pdf_files}")
-
-    for pdf_file in pdf_files:
-        try:
-            file_path = os.path.join(documents_dir, pdf_file)
-            logger.info(f"🔄 Processing {pdf_file}...")
-            
-            result = await document_processor.process_document(file_path, pdf_file)
-            logger.info(f"✅ Processed {pdf_file}: {result['chunks_processed']} chunks")
-        except Exception as e:
-            logger.error(f"❌ Failed to process {pdf_file}: {str(e)}")
-
-# Create FastAPI app
+# --- FastAPI App Initialization ---
 app = FastAPI(
-    title="Insurance Claim Processing System",
-    description="LLM-powered document processing for insurance claims",
-    version="1.0.0",
+    title="HackRX Insurance Claim System",
+    description="LLM-powered document analysis for the HackRX competition.",
+    version="2.0.0",
     lifespan=lifespan
 )
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.js default port
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# --- API Endpoints ---
 @app.get("/")
 async def root():
-    """Health check endpoint"""
-    return {"message": "Insurance Claim System is running!", "status": "healthy"}
+    return {"message": "HackRX Insurance System is running!", "status": "healthy"}
 
 @app.get("/health")
 async def health_check():
-    """Detailed health check"""
-    try:
-        # Check if services are initialized
-        services_status = {
-            "embedding_service": embedding_service is not None,
-            "vector_store": vector_store is not None,
-            "document_processor": document_processor is not None,
-            "query_processor": query_processor is not None
-        }
-        
-        # Check document count in vector store
-        doc_count = await vector_store.get_document_count() if vector_store else 0
-        
-        return {
-            "status": "healthy",
-            "services": services_status,
-            "documents_processed": doc_count,
-            "timestamp": "2024-01-01T00:00:00Z"
-        }
-    except Exception as e:
-        logger.error(f"Health check failed: {str(e)}")
-        raise HTTPException(status_code=500, detail="System unhealthy")
+    """Health check endpoint for deployment monitoring"""
+    return {
+        "status": "healthy",
+        "service": "HackRX Insurance System",
+        "version": "2.0.0",
+        "timestamp": time.time()
+    }
 
-@app.post("/process-query", response_model=QueryResponse)
-async def process_query(request: QueryRequest):
-    """Main endpoint to process insurance claim queries"""
-    try:
-        logger.info(f"🔍 Processing query: {request.query}")
-        
-        if not query_processor:
-            raise HTTPException(status_code=500, detail="Query processor not initialized")
-        
-        # Process the query
-        result = await query_processor.process_query(request.query)
-        
-        logger.info(f"✅ Query processed successfully. Decision: {result['decision']}")
-        return result
-        
-    except Exception as e:
-        logger.error(f"❌ Query processing failed: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Query processing failed: {str(e)}")
+@app.post("/hackrx/run", response_model=HackRXResponse)
+async def hackrx_run(request: HackRXRequest, credentials: HTTPAuthorizationCredentials = Security(verify_token)):
+    """Main competition endpoint with authentication and explicit memory cleanup"""
+    # Create temporary instances for this request
+    temp_vector_store = None
+    temp_query_processor = None
 
-@app.post("/upload-document")
-async def upload_document(file: UploadFile = File(...)):
-    """Upload a new document for processing"""
     try:
-        logger.info(f"📤 Uploading document: {file.filename}")
-        
-        if not file.filename.endswith('.pdf'):
-            raise HTTPException(status_code=400, detail="Only PDF files are supported")
-        
-        # Save uploaded file
-        file_path = f"documents/{file.filename}"
-        with open(file_path, "wb") as buffer:
-            content = await file.read()
-            buffer.write(content)
-        
-        # Process the document
-        result = await document_processor.process_document(file_path, file.filename)
-        
-        logger.info(f"✅ Document uploaded and processed: {result['chunks_processed']} chunks")
-        return {"message": "Document processed successfully", "chunks": result['chunks_processed']}
-        
-    except Exception as e:
-        logger.error(f"❌ Document upload failed: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Document upload failed: {str(e)}")
+        start_time = time.time()
+        logger.info(f"🔍 Processing HackRX request with {len(request.questions)} questions")
+        logger.info(f"📄 Document URL: {request.documents}")
 
-@app.get("/documents/status")
-async def get_documents_status():
-    """Get status of all processed documents"""
-    try:
-        if not vector_store:
-            raise HTTPException(status_code=500, detail="Vector store not initialized")
-        
-        status = await vector_store.get_collection_info()
-        logger.info("📊 Retrieved document status")
-        return status
-        
-    except Exception as e:
-        logger.error(f"❌ Failed to get document status: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Failed to get status: {str(e)}")
+        # Process document from URL
+        logger.info("📥 Downloading and processing document...")
+        chunks = await document_processor.process_document_from_url(request.documents)
 
-if __name__ == "__main__":
-    # Create necessary directories
-    os.makedirs("logs", exist_ok=True)
-    os.makedirs("documents", exist_ok=True)
-    os.makedirs("chroma_db", exist_ok=True)
+        if not chunks:
+            logger.error("❌ No content extracted from document")
+            return HackRXResponse(answers=["No content found in document"] * len(request.questions))
+
+        # Create temporary vector store for this request
+        temp_vector_store = InMemoryVectorStore()
+        temp_query_processor = QueryProcessor(embedding_service, temp_vector_store)
+
+        # Process all questions against the document
+        logger.info("🤖 Processing queries with LLM...")
+        answers = await temp_query_processor.process_batch_queries(request.questions, chunks)
+
+        processing_time = time.time() - start_time
+        logger.info(f"✅ Completed processing in {processing_time:.2f}s")
+        logger.info(f"📊 Processed {len(chunks)} chunks, answered {len(answers)} questions")
+
+        return HackRXResponse(answers=answers)
+
+    except Exception as e:
+        logger.error(f"❌ HackRX processing failed: {str(e)}")
+        # Return error responses for all questions
+        error_answers = [f"Unable to process question due to error: {str(e)}"] * len(request.questions)
+        return HackRXResponse(answers=error_answers)
     
+    finally:
+        # Explicit cleanup
+        if temp_vector_store:
+            temp_vector_store.clear()
+            logger.info("🧹 Explicitly cleared vector store memory")
+
+        # Clear temporary variables
+        temp_vector_store = None
+        temp_query_processor = None
+        chunks = None
+
+        logger.info("🧼 Request-specific memory cleanup completed")
+
+# --- Main Execution Block ---
+if __name__ == "__main__":
+    os.makedirs("documents", exist_ok=True)
+
+    import uvicorn
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
