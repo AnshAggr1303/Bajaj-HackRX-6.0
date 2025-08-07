@@ -24,23 +24,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Create and start virtual environment
+      # Create virtual environment and install dependencies from the backend folder
+      - name: Install dependencies
         run: |
           python -m venv venv
           source venv/bin/activate
+          # The key change is here to find requirements.txt
+          pip install -r backend/requirements.txt
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-        
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-
+      # Upload only the backend directory for deployment
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            .
-            !venv/
+          # This is simplified to just the backend directory
+          path: backend/
 
   deploy:
     runs-on: ubuntu-latest
@@ -68,4 +66,4 @@ jobs:
         with:
           app-name: 'hackrx-rag-backend'
           slot-name: 'Production'
-          
+          package: .
