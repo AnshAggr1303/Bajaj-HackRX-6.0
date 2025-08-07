@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - hackrx-rag-backend
+name: Build and deploy Python app to Azure Web App - hackrx-fastapi
 
 on:
   push:
@@ -24,23 +24,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-      
+      # Navigate to the backend directory before installing dependencies
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-
+        run: |
+          python -m venv hackrx_env
+          source hackrx_env/bin/activate
+          pip install -r backend/requirements.txt
+      
+      # Upload the backend directory for deployment
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            .
-            !venv/
+          path: backend/
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,14 +54,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8787225960CD497D9173F063196AB6CF }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_18E74A3600244806B7CF784390A1C202 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_796EE6700FF6458684BED4EC06AE91C7 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DC5038DBA2F84504A30C710C38DC4B4B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CC8B0F86F5934B8C8FE8B9CD30F6ECD7 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F8E6A774DF6F44B5A934644323D8FA2E }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'hackrx-rag-backend'
+          app-name: 'hackrx-fastapi'
           slot-name: 'Production'
-          
+          # The package path is the directory where the code is located after downloading the artifact
+          package: .
