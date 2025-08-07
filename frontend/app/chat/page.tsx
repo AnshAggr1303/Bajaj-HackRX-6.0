@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import ChatHeader from "./components/ChatHeader"
-import MessagesArea from "./components/MessagesArea"
-import ChatInput from "./components/ChatInput"
+import ChatHeader from "../components/ChatHeader"
+import MessagesArea from "../components/MessagesArea"
+import ChatInput from "../components/ChatInput"
 import { Message } from "@/types/chat"
 import { processInsuranceQuery, uploadDocument } from "@/lib/api"
 import { toast } from "sonner"
+import { AnimatePresence } from "framer-motion"
 
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([])
@@ -65,12 +66,12 @@ export default function ChatPage() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: "I apologize, but I'm having trouble processing your request right now. Please try again later or contact support if the issue persists.",
+        content: "I apologize, but I'm experiencing technical difficulties processing your request. Please try again in a moment, or contact our support team if the issue persists.\n\n**Error Reference:** ERR-" + Date.now().toString().slice(-6),
         timestamp: new Date(),
       }
 
       setMessages(prev => [...prev, errorMessage])
-      toast.error("Failed to process your query. Please try again.")
+      toast.error("Unable to process your request at this time")
     } finally {
       setIsLoading(false)
     }
@@ -83,16 +84,16 @@ export default function ChatPage() {
       const uploadMessage: Message = {
         id: Date.now().toString(),
         role: "assistant",
-        content: `✅ Successfully uploaded "${file.name}". The document has been processed and added to your policy database.`,
+        content: `**Document Upload Successful**\n\nFile: "${file.name}"\nStatus: Processed and indexed\nReference: DOC-${Date.now().toString().slice(-6)}\n\nYour document has been successfully added to your policy database and is now available for analysis and reference.`,
         timestamp: new Date(),
       }
 
       setMessages(prev => [...prev, uploadMessage])
-      toast.success(`Document "${file.name}" uploaded successfully!`)
+      toast.success(`Document "${file.name}" uploaded successfully`)
       
     } catch (error) {
       console.error('Error uploading file:', error)
-      toast.error("Failed to upload document. Please try again.")
+      toast.error("Document upload failed. Please try again.")
     }
   }
 
@@ -102,42 +103,43 @@ export default function ChatPage() {
     let response = `**Decision:** ${decision}\n\n`
     
     if (amount && amount > 0) {
-      response += `**Amount:** $${amount.toLocaleString()}\n\n`
+      response += `**Coverage Amount:** $${amount.toLocaleString()}\n\n`
     }
     
-    response += `**Justification:**\n${justification}\n\n`
+    response += `**Analysis:**\n${justification}\n\n`
     
     if (referenced_clauses && referenced_clauses.length > 0) {
-      response += `**Referenced Policy Sections:**\n${referenced_clauses.map((clause: string) => `• ${clause}`).join('\n')}\n\n`
+      response += `**Policy References:**\n${referenced_clauses.map((clause: string) => `• ${clause}`).join('\n')}\n\n`
     }
     
     if (confidence_score) {
       const confidencePercent = Math.round(confidence_score * 100)
-      response += `**Confidence Level:** ${confidencePercent}% ${getConfidenceEmoji(confidence_score)}\n\n`
+      const confidenceLevel = confidence_score >= 0.9 ? "High Confidence" : 
+                             confidence_score >= 0.7 ? "Moderate Confidence" : "Low Confidence"
+      response += `**Assessment Confidence:** ${confidenceLevel} (${confidencePercent}%)\n\n`
     }
     
     if (additional_info?.sources && additional_info.sources.length > 0) {
-      response += `**Sources Consulted:**\n${additional_info.sources.map((source: string) => `• ${source}`).join('\n')}`
+      response += `**Documentation Reviewed:**\n${additional_info.sources.map((source: string) => `• ${source}`).join('\n')}\n\n`
     }
+
+    response += `*This analysis is based on your current policy terms and conditions. For official determinations, please contact our claims department.*`
 
     return response
   }
 
-  const getConfidenceEmoji = (score: number): string => {
-    if (score >= 0.9) return "🟢"
-    if (score >= 0.7) return "🟡"
-    return "🔴"
-  }
-
   const clearHistory = () => {
     setMessages([])
-    initialQueryProcessed.current = false // Reset the flag when history is cleared
-    toast.success("Chat history cleared!")
+    initialQueryProcessed.current = false
+    toast.success("Conversation history cleared")
   }
 
   return (
-    <div className="flex h-screen flex-col bg-gray-50">
-      <ChatHeader onClearHistory={clearHistory} />
+    <div className="flex h-screen flex-col bg-[#fafafa]">
+      <ChatHeader 
+        onClearHistory={clearHistory}
+        messages={messages}
+      />
       <MessagesArea 
         messages={messages} 
         isLoading={isLoading} 

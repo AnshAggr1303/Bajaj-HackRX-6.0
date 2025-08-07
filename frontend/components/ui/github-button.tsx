@@ -1,24 +1,32 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github } from "lucide-react"
+import { Github } from 'lucide-react'
 import { motion } from "framer-motion"
 
 interface GithubButtonProps {
-  animationDuration?: number
-  label?: string
-  size?: "sm" | "default" | "lg"
   repoUrl: string
+  label?: string
+  size?: "sm" | "md" | "lg"
+  animationDuration?: number
 }
 
-export function GithubButton({
-  animationDuration = 1.5,
-  label = "GitHub",
-  size = "default",
-  repoUrl,
+export function GithubButton({ 
+  repoUrl = "https://github.com/AnshAggr1303/Bajaj-HackRX-6.0", 
+  label = "GitHub", 
+  size = "md",
+  animationDuration = 1 
 }: GithubButtonProps) {
-  const handleClick = () => {
-    window.open(repoUrl, "_blank", "noopener,noreferrer")
+  const sizeClasses = {
+    sm: "h-8 px-3 text-xs",
+    md: "h-10 px-4 text-sm", 
+    lg: "h-12 px-6 text-base"
+  }
+
+  const iconSizes = {
+    sm: 14,
+    md: 16,
+    lg: 18
   }
 
   return (
@@ -28,13 +36,13 @@ export function GithubButton({
       transition={{ duration: animationDuration, ease: "easeOut" }}
     >
       <Button
-        onClick={handleClick}
         variant="outline"
         size={size}
-        className="flex items-center gap-2 bg-white/30 backdrop-blur-lg border border-gray-200/50 hover:bg-white/60 transition-all duration-300"
+        className={`${sizeClasses[size]} bg-white/80 backdrop-blur-sm border-gray-200 hover:bg-gray-50 transition-colors`}
+        onClick={() => window.open(repoUrl, '_blank')}
       >
-        <Github className="w-4 h-4" />
-        <span className="font-medium">{label}</span>
+        <Github size={iconSizes[size]} className="mr-2" />
+        {label}
       </Button>
     </motion.div>
   )

@@ -3516,3 +3516,46 @@ Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Pare
 2025-08-07 00:56:41,830 - app.query_processor - INFO - 📄 Referenced sources: ['Document 2: Page 27', 'Document 3: Clause viii, Page 21', 'Document 8: Table 1, Page 28']
 2025-08-07 00:56:41,830 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
 2025-08-07 00:57:22,499 - app.main - INFO - 🛑 Shutting down system...
+2025-08-07 14:48:11,850 - app.main - INFO - 🚀 Starting Insurance Claim System...
+2025-08-07 14:48:11,850 - app.embedding_service - INFO - 🔧 Initializing all-MiniLM-L6-v2 embedding service...
+2025-08-07 14:48:11,850 - app.embedding_service - INFO - 📥 Loading model: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 14:48:11,850 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-08-07 14:48:15,503 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-08-07 14:48:16,102 - app.embedding_service - INFO - ✅ MiniLM embedding service initialized successfully
+2025-08-07 14:48:16,103 - app.embedding_service - INFO - 📊 Model dimension: 384
+2025-08-07 14:48:16,103 - app.vector_store - INFO - 🔧 Initializing ChromaDB at: ./chroma_db
+2025-08-07 14:48:17,646 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 14:48:17,648 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 14:48:17,648 - app.vector_store - INFO - ✅ ChromaDB initialized. Collection: insurance_documents
+2025-08-07 14:48:17,739 - app.main - INFO - 📚 Found 1844 existing documents in vector store - skipping processing
+2025-08-07 14:48:17,739 - app.main - INFO - ✅ System initialized successfully!
+2025-08-07 14:49:52,547 - app.main - INFO - 🔍 Processing query: hi
+2025-08-07 14:49:52,549 - app.query_processor - INFO - 🔍 Processing query: hi
+2025-08-07 14:49:56,401 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-08-07 14:49:56,401 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 14:49:56,401 - app.query_processor - INFO - 📄 Doc 1 (similarity: -0.626): of delay Page 92 of 101 CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LIMITED Registered Office: 2nd Floor, “DARE House”, 2, N.S.C Bose Road, Chennai – 600 001.
+Toll free: 1800 208 9100, T: +91 (0) 44 40...
+2025-08-07 14:49:56,401 - app.query_processor - INFO - 📄 Doc 2 (similarity: -0.626): of delay Page 92 of 101 CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LIMITED Registered Office: 2nd Floor, “DARE House”, 2, N.S.C Bose Road, Chennai – 600 001.
+Toll free: 1800 208 9100, T: +91 (0) 44 40...
+2025-08-07 14:49:56,401 - app.query_processor - INFO - 📄 Doc 3 (similarity: -0.657): dangerous sport. Page 4 of 101 CHOLAMANDALAM MS GENERAL INSURANCE COMPANY LIMITED Registered Office: 2nd Floor, “DARE House”, 2, N.S.C Bose Road, Chennai – 600 001.
+Toll free: 1800 208 9100, T: +91 (0...
+2025-08-07 14:49:56,401 - app.query_processor - INFO - 📄 Filtered to 0 docs with similarity > 0.4
+2025-08-07 14:49:56,401 - app.query_processor - WARNING - ⚠️ No high-similarity documents found, using all results
+2025-08-07 14:52:29,621 - app.query_processor - INFO - ✅ Decision: Undecided, Confidence: 0.9
+2025-08-07 14:52:29,622 - app.query_processor - INFO - 📄 Referenced sources: []
+2025-08-07 14:52:29,622 - app.main - INFO - ✅ Query processed successfully. Decision: Undecided
+2025-08-07 15:53:07,317 - app.main - INFO - 🔍 Processing query: How do I file a cashless claim with HDFC ERGO?
+2025-08-07 15:53:07,318 - app.query_processor - INFO - 🔍 Processing query: How do I file a cashless claim with HDFC ERGO?
+2025-08-07 15:53:08,940 - app.query_processor - INFO - 📄 Found 15 relevant documents
+2025-08-07 15:53:08,940 - app.query_processor - INFO - 📄 Doc 1 (similarity: 0.524): on Our prior Within 7 days of the Insured Person’s discharge acceptance of a claim under Section B-1)a): post-hospitalisation. e Cashless Service:
+Treatment, Consultation Treatment, Cashless Service W...
+2025-08-07 15:53:08,940 - app.query_processor - INFO - 📄 Doc 2 (similarity: 0.524): on Our prior Within 7 days of the Insured Person’s discharge acceptance of a claim under Section B-1)a): post-hospitalisation. e Cashless Service:
+Treatment, Consultation Treatment, Cashless Service W...
+2025-08-07 15:53:08,941 - app.query_processor - INFO - 📄 Doc 3 (similarity: 0.488): gistered &
+Corporate Office: 1st Floor, HDFC House, 165-166 Backbay Reclamation, H. T. Parekh Marg, Churchgate, Mumbai – 400
+020. Trade Logo displayed above belongs to HDFC Ltd and ERGO International ...
+2025-08-07 15:53:08,941 - app.query_processor - INFO - 📄 Filtered to 12 docs with similarity > 0.4
+2025-08-07 15:53:13,394 - app.query_processor - INFO - ✅ Decision: Approved, Confidence: 0.9
+2025-08-07 15:53:13,394 - app.query_processor - INFO - 📄 Referenced sources: ['Document 1 & 2: Section e - Cashless Service', 'Document 3, 4, 5, 6 & 7: viii) Cashless service', 'Document 8, 9, 10, 11 & 12: TABLE 1']
+2025-08-07 15:53:13,394 - app.main - INFO - ✅ Query processed successfully. Decision: Approved
+2025-08-07 16:48:20,005 - app.main - INFO - 🛑 Shutting down system...

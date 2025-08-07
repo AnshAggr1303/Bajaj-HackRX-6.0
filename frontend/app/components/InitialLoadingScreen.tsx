@@ -20,14 +20,14 @@ export default function InitialLoadingScreen({ query }: InitialLoadingScreenProp
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-            className="w-20 h-20 border-4 border-slate-100/30 border-t-blue-300/80 rounded-full"
+            className="w-20 h-20 border-4 border-slate-100/30 border-t-slate-700/80 rounded-full"
           />
           
           {/* Inner ring */}
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-3 w-14 h-14 border-3 border-slate-50/20 border-t-blue-200/60 rounded-full"
+            className="absolute inset-3 w-14 h-14 border-3 border-slate-50/20 border-t-slate-600/60 rounded-full"
           />
         </div>
       </motion.div>
