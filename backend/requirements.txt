@@ -30,5 +30,3 @@ numpy==1.26.4
 # langchain - Not using LangChain
 # langchain-google-genai - Not using LangChain
 # langchain-community - Not using LangChain
-
-gunicorn==21.2.0

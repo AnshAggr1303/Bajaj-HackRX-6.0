@@ -24,12 +24,12 @@ from .in_memory_vector_store import InMemoryVectorStore
 load_dotenv()
 
 # --- Setup Logging ---
-os.makedirs("logs", exist_ok=True)
+
 logging.basicConfig(
     level=getattr(logging, os.getenv("LOG_LEVEL", "INFO")),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logs/app.log'),
+        
         logging.StreamHandler()
     ]
 )
@@ -178,13 +178,13 @@ async def hackrx_run(request: HackRXRequest, credentials: HTTPAuthorizationCrede
 
 # --- Main Execution Block ---
 if __name__ == "__main__":
-    os.makedirs("documents", exist_ok=True)
+    
 
     import uvicorn
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
-        port=8000,
+        port=int(os.environ.get("PORT", 8000)),
         reload=True,
         log_level="info"
     )

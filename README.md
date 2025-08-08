@@ -20,7 +20,7 @@ cd Bajaj-HackRX-6.0
 
 2. **Create and activate a Python 3.11 virtual environment:**
    ```bash
-   python3 -m venv hackrx_env
+   python3.12 -m venv hackrx_env
    source hackrx_env/bin/activate  # On Windows: hackrx_env\Scripts\activate
    ```
 
