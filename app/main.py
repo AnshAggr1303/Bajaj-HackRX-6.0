@@ -177,14 +177,13 @@ async def hackrx_run(request: HackRXRequest, credentials: HTTPAuthorizationCrede
         logger.info("🧼 Request-specific memory cleanup completed")
 
 # --- Main Execution Block ---
+# Change this line in main.py
 if __name__ == "__main__":
-    
-
     import uvicorn
     uvicorn.run(
-        "app.main:app",
+        "main:app",  # Changed from "app.main:app"
         host="0.0.0.0",
         port=int(os.environ.get("PORT", 8000)),
-        reload=True,
+        reload=False,  # Set to False for production
         log_level="info"
     )
