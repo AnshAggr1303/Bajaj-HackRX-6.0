@@ -13,7 +13,7 @@ google-generativeai>=0.3.0
 # Data handling
 pydantic==2.5.0
 numpy==1.26.4
-# CPU-only ML (much smaller)
+# ML models - standard versions
 sentence-transformers==2.6.1
-torch==2.1.0+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.1.0
 transformers==4.36.0
