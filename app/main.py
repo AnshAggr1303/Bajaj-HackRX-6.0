@@ -181,9 +181,9 @@ async def hackrx_run(request: HackRXRequest, credentials: HTTPAuthorizationCrede
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "main:app",  # Changed from "app.main:app"
+        "app.main:app",  # Updated module path
         host="0.0.0.0",
-        port=int(os.environ.get("PORT", 8000)),
-        reload=False,  # Set to False for production
+        port=7860,  # Changed to 7860 for HF Spaces
+        reload=False,
         log_level="info"
     )
